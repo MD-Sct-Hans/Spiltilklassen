@@ -1,0 +1,328 @@
+<!doctype html><html lang="da"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Den interaktive tallinje 5.1 · Spil Til Klassen</title><style>
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#182d43;background:#ecf5f8}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 85% 0%,#d4f5e5,transparent 32%),#edf5f9}button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:1420px;margin:auto;padding:20px}.top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.brand{font-weight:900;font-size:clamp(25px,3.5vw,40px);letter-spacing:-.04em}.eyebrow{color:#517089;font-size:14px;font-weight:800;letter-spacing:.08em}.pill{background:white;border:1px solid #cde0e9;padding:10px 14px;border-radius:999px;font-weight:700}.layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:16px;margin-top:17px}.card{background:white;border:1px solid #d7e5ed;border-radius:22px;box-shadow:0 9px 32px #193b5510}.main{padding:23px;min-width:0}.sidebar{padding:22px}.modes{display:flex;gap:7px;flex-wrap:wrap;margin:19px 0}.tab{border:1px solid #cbdfe7;border-radius:12px;padding:12px 15px;background:#fff;font-weight:750;color:#264b61}.tab.active{background:#175f9e;color:white;border-color:#175f9e}.task{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:12px;margin:10px 0 5px}.task>div{min-width:0}.task>.pill{white-space:nowrap;justify-self:end;text-align:center;min-width:138px;flex-shrink:0}@media(max-width:560px){.task{grid-template-columns:minmax(0,1fr) 112px;gap:8px}.task>.pill{min-width:0;width:112px;padding:9px 8px;font-size:13px}.task h2{font-size:clamp(19px,5.3vw,26px)}}.task h2{font-size:clamp(22px,3vw,33px);margin:0;letter-spacing:-.03em}.muted{color:#58758b}.chart{position:relative;background:linear-gradient(180deg,#f1faff,#fff);border:1px solid #d8ebf3;border-radius:16px;margin-top:18px;overflow:hidden;touch-action:manipulation}.chart svg{width:100%;display:block;overflow:visible;touch-action:manipulation}.feedback{min-height:42px;font-size:18px;font-weight:800;margin:16px 0 0}.feedback.good{color:#087d4f}.feedback.bad{color:#b15b13}.buttons{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.primary{background:#1665ac;border:none;color:white}.secondary{background:#eaf3f8;color:#25536b;border:1px solid #cbdce7}.primary,.secondary{padding:12px 17px;border-radius:12px;font-weight:800}.primary:hover{background:#07518f}.formrow{display:grid;grid-template-columns:1fr 1fr;gap:9px}.field{display:flex;flex-direction:column;gap:5px;margin:11px 0}.field label{font-weight:750;font-size:13px;color:#48677d}.field input,.field select{padding:11px;background:#fff;border:1px solid #bfd3df;border-radius:10px;width:100%;min-width:0}.sidehead{font-size:22px;font-weight:900;margin:0 0 9px}.hint{background:#f0f8ff;border-radius:12px;border:1px solid #daedf8;padding:13px;color:#37586e;font-size:14px;line-height:1.5}.score{font-size:28px;font-weight:900;color:#165e96;margin:10px 0}.markers{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.markers button{border:1px solid #cddfeb;border-radius:9px;padding:7px 10px;background:#fff;font-weight:800}.markers button.selected{background:#1867ad;color:white}.sequence{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin:16px 0}.seqitem{background:#edf7fc;padding:10px 15px;border:2px solid #d3e7f3;border-radius:13px;font-size:clamp(24px,4vw,40px);font-weight:900;min-width:64px;text-align:center}.seqitem.missing{border:2px dashed #e0a434;background:#fff7df}.seqinput{width:100px;font-size:25px;padding:9px;border:2px solid #85bad5;border-radius:11px;text-align:center}.footer{margin:14px 2px;color:#5e778a;font-size:13px}.status{color:#225c8f;font-size:15px;font-weight:750}.toggle{display:flex;gap:9px;align-items:center;font-weight:700;margin:10px 0}.toggle input{width:20px;height:20px}button:focus-visible,input:focus-visible{outline:3px solid #e5a52f;outline-offset:2px}@media(max-width:850px){.layout{grid-template-columns:1fr}.wrap{padding:10px}.main,.sidebar{padding:14px}.chart svg{min-height:200px}.sidebar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.sidebar>*{min-width:0}.sidebar .sidehead,.sidebar .hint{grid-column:1/-1}}@media print{.modes,.sidebar,.buttons,.top .pill,.footer{display:none}.layout{display:block}.card{border:0;box-shadow:none}}
+.problem-editor{padding:16px;margin:0 0 14px;border:2px solid #d4e7f2;border-radius:16px;background:#f5faff}.problem-form{display:flex;gap:9px;align-items:end;flex-wrap:wrap}.problem-form label{display:flex;flex-direction:column;gap:5px;font-size:14px;font-weight:800;color:#3b637c}.problem-form input{width:235px;max-width:100%;font-size:21px;font-weight:800;padding:10px;border:1px solid #accbdc;border-radius:10px}.problem-form button{min-height:44px}.problem-display{margin:12px 0 4px;text-align:center;font-weight:900;font-size:clamp(25px,4vw,43px);color:#124d80}.problem-note{font-size:13px;color:#536f83;margin-top:8px}.problem-status{font-size:14px;font-weight:800;color:#a04814;min-height:20px}.open-tool{margin-top:14px}.open-bar,.open-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}.open-mode-group{display:flex;gap:5px;background:#edf5fa;border-radius:12px;padding:4px}.open-switch{border:0;border-radius:9px;background:transparent;padding:10px 13px;font-weight:800;color:#294d63}.open-switch.current{background:#1766a7;color:#fff;box-shadow:0 2px 8px #134b7630}.open-help{font-size:14px;color:#4c7185;margin:11px 0}.open-canvas{background:linear-gradient(#f7fcff,#fff);border:1px solid #cce2ee;border-radius:15px;overflow:hidden}.open-canvas svg{width:100%;display:block;touch-action:none;user-select:none}.open-notes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.open-notes label{font-size:13px;font-weight:800;color:#43677b}.open-notes input{width:100%;margin-top:6px;border:1px solid #bed3df;border-radius:9px;padding:10px}.open-actions{justify-content:flex-start;margin-top:12px}.open-actions button{font-size:13px}@media(max-width:650px){.open-notes{grid-template-columns:1fr}.open-bar{justify-content:center}.open-switch{padding:8px 9px;font-size:13px}}@media print{.open-bar,.open-help,.open-actions{display:none}}
+.open-checkbox{display:inline-flex;align-items:center;gap:5px;padding:7px 10px;font-size:13px;font-weight:750;color:#22536e;background:#edf6fb;border-radius:10px}.open-checkbox input{width:20px;height:20px}.checkresult{border-radius:12px;padding:12px;background:#f1f7fc;border:1px solid #cfe2ef;margin:12px 0;line-height:1.45;font-weight:700}.checkresult:empty{display:none}.checkresult.ok{background:#e4f8ec;color:#14623c}.checkresult.warn{background:#fff4df;color:#835211}.presetbox{margin-top:14px;padding:13px;background:#f6f9fc;border:1px solid #d5e5ed;border-radius:14px}.presets{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}.presets button{background:white;border:1px solid #bdcedc;border-radius:10px;padding:9px 12px;font-weight:750;color:#1d567e}.presets button:hover{background:#e4f2fd}.open-switch{white-space:nowrap}@media(min-width:1100px){.main{min-height:600px}}
+
+/* The hidden attribute must win over author display:flex rules. */
+[hidden]{display:none!important}
+.jump-panel{margin:18px 0 3px;padding:15px;border:1px solid #bfdce9;background:#f1faff;border-radius:16px}
+.jump-label{font-size:15px;font-weight:850;margin-bottom:10px;color:#24485e}
+.jump-range{margin-top:18px;background:#fff;border:1px solid #cbdfe9;border-radius:14px;padding:13px;margin-bottom:16px}.jump-range-title{font-size:16px;font-weight:850;color:#24485e;margin-bottom:8px}.jump-range-fields{display:flex;align-items:end;gap:12px;flex-wrap:wrap}.jump-range-fields label{display:flex;flex-direction:column;gap:5px;font-size:14px;font-weight:750;color:#365b72}.jump-range-fields input{width:112px;max-width:100%;border:1px solid #b6d0e0;border-radius:10px;padding:9px 10px;font-size:19px;font-weight:800}.jump-range-preset{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.jump-range-preset button{border:1px solid #bed5e4;background:#edf6fb;border-radius:9px;padding:8px 11px;font-size:14px;font-weight:800;color:#215677}.jump-range-preset button:active{background:#c8e7f9}.jump-range-msg{font-size:13px;color:#a4482d;min-height:1.2em;margin-top:6px;font-weight:700}
+.jump-controls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.jump-btn{border:0;border-radius:13px;padding:15px 5px;font-size:clamp(19px,2.6vw,29px);font-weight:900;color:#fff;background:#16875f;min-height:57px;touch-action:manipulation}
+.jump-btn.minus{background:#cb5b43}
+.jump-btn:active{transform:scale(.97)}
+.jump-summary{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:11px;font-weight:800}
+.jump-summary input{width:92px;padding:9px;border:1px solid #b6d0e0;border-radius:9px;font-size:19px;font-weight:800}
+.jump-current{font-size:23px;color:#075a94}body.jump-active #feedback{overflow-wrap:anywhere;word-break:normal;line-height:1.65;font-variant-numeric:tabular-nums}
+body.jump-active .layout{grid-template-columns:1fr}body.jump-active .sidebar{display:none}
+@media(max-width:550px){.jump-controls{grid-template-columns:repeat(4,minmax(0,1fr))}.jump-btn{padding:13px 2px;min-height:55px}}
+
+/* Punktværktøj – flyt er standard, nye punkter kræver eksplicit valg */
+#line{touch-action:none;user-select:none}
+#pointAddPanel{display:block;margin:14px 0;padding:13px;background:#eef8fb;border:1px solid #bcdce8;border-radius:14px}
+#pointAddPanel[hidden]{display:none}
+#pointAddPanel .toggle{margin:0;font-size:16px;cursor:pointer}
+#pointAddPanel input{width:23px;height:23px;accent-color:#1665ac}
+#pointHelp{font-size:13px;color:#4b687a;margin-top:7px;line-height:1.4}
+
+.jump-goal{background:#fff9e8;border:2px solid #e8c45e;border-radius:14px;padding:14px;margin:0 0 15px}
+.jump-goal-head{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.jump-goal-switch{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:850;color:#674d12;cursor:pointer}
+.jump-goal-switch input{width:24px;height:24px;accent-color:#ad780b}
+.jump-goal-options{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px}
+.jump-goal-options[hidden]{display:none!important}
+.jump-goal-options label{font-weight:800;color:#675018}
+.jump-goal-options input{width:108px;padding:10px;border:1px solid #c8a84c;border-radius:10px;font-size:19px;font-weight:800}
+.jump-goal-message{font-size:14px;font-weight:750;color:#6b531c;margin-top:8px;min-height:20px}
+.jump-goal-message.reached{color:#087d4f;font-size:18px}
+</style></head><body><div class="wrap"><header class="top"><div><div class="eyebrow">SPIL TIL KLASSEN · MATEMATIK</div><div class="brand">Den interaktive tallinje 5.1</div><div class="muted">Undersøg tal, regnestrategier og mønstre sammen</div></div><button class="pill" id="full">⛶ Fuld skærm</button></header><nav class="modes" id="modes" aria-label="Aktivitetstyper"><button class="tab active" data-mode="explore">Fri tallinje</button><button class="tab" data-mode="find">Find tallet</button><button class="tab" data-mode="jump">Regnehop</button><button class="tab" data-mode="sequence">Talrækker</button><button class="tab" data-mode="fraction">Brøker</button></nav><div class="layout"><main class="card main"><div class="task"><div><div class="eyebrow" id="modeLabel">UDFORSK</div><h2 id="taskTitle">Tryk på tallinjen for at sætte mærker</h2></div><span class="pill" id="scoreBadge">Fri udforskning</span></div><div class="muted" id="subtitle">Sammenlign tal og forklar, hvorfor punkterne ligger netop dér.</div><div id="lineWrap" class="chart"><svg id="line" viewBox="0 0 1000 280" role="img" aria-label="Interaktiv tallinje"></svg></div><section id="openTool" class="open-tool" hidden>
+<div class="problem-editor"><div class="problem-form"><label for="problemInput">Lærerens regnestykke<input id="problemInput" type="text" inputmode="text" value="64 − 28" maxlength="32" aria-describedby="problemHelp" /></label><button type="button" class="primary" id="problemSet">Vis opgaven</button><button type="button" class="secondary" id="problemRandom">Tilfældig opgave</button><button type="button" class="secondary" id="problemClear">Skjul opgaven</button></div><div class="problem-status" id="problemStatus" role="status"></div><div id="problemDisplay" class="problem-display" aria-live="polite">64 − 28 = ?</div><div class="problem-note" id="problemHelp">Skriv fx 64 − 28, 38 + 27 eller −4 + 9. Opgaven vises over begge tallinjer. Der vises ikke en facitliste, så eleverne selv kan forklare deres løsninger.</div></div>
+<div class="open-bar"><div class="open-mode-group" role="group" aria-label="Vælg strategi"><button type="button" class="open-switch current" data-lane="0">Strategi A</button><button type="button" class="open-switch" data-lane="1">Strategi B</button></div><div class="open-mode-group" role="group" aria-label="Vælg tegneværktøj"><button type="button" class="open-switch current" data-kind="hop">Tegn hop</button><button type="button" class="open-switch" data-kind="point">Sæt tal</button><button type="button" class="open-switch" data-kind="move">Flyt / ret</button><button type="button" class="open-switch" data-kind="delete">Slet enkelt</button></div></div>
+<div class="open-help">Tegn hop ved at trække. Vælg “Flyt / ret” og træk et punkt eller en ende af et hop for at ændre den. Tryk uden at flytte for at redigere teksten. Brug “Slet enkelt” til at fjerne en markering.</div>
+<div class="open-canvas"><svg id="openSvg" viewBox="0 0 1000 420" aria-label="To interaktive tallinjer til sammenligning af regnestrategier" role="img"></svg></div>
+<div class="open-notes"><label>Forklaring til strategi A <input id="noteA" placeholder="Fx: Først til nærmeste tier…" maxlength="140"></label><label>Forklaring til strategi B <input id="noteB" placeholder="Fx: Jeg delte 27 i 20 og 7…" maxlength="140"></label></div>
+<div class="open-actions"><button type="button" class="secondary" id="openCheck">Kontrollér hop</button><label class="open-checkbox"><input type="checkbox" id="openFree"> Åben tallinje uden skala</label><button type="button" class="secondary" id="openSwap">Byt strategier</button><button type="button" class="secondary" id="openClearLane">Ryd valgt strategi</button><button type="button" class="secondary" id="openExport">Gem som billede (SVG)</button><button type="button" class="primary" id="openSave">Gem redigerbar fil</button><button type="button" class="secondary" id="openLoad">Åbn gemt fil</button><input type="file" id="openLoadFile" accept=".json,application/json" hidden></div>
+<div id="openCheckResult" class="checkresult" role="status" aria-live="polite"></div><div class="presetbox"><strong>Færdige undervisningsaktiviteter</strong><div class="presets"><button type="button" data-preset="friends">Tiervenner</button><button type="button" data-preset="bridge">Tierovergang</button><button type="button" data-preset="compensation">Kompensation</button><button type="button" data-preset="negative">Negative tal</button><button type="button" data-preset="double">Store regnehop</button></div></div></section><section id="jumpPanel" class="jump-panel" hidden aria-label="Regnehop">
+<div class="jump-label">Vælg hvor langt du vil hoppe</div>
+<div class="jump-controls" id="jumpControls">
+<button type="button" class="jump-btn" data-jump="1">+1</button><button type="button" class="jump-btn" data-jump="2">+2</button><button type="button" class="jump-btn" data-jump="5">+5</button><button type="button" class="jump-btn" data-jump="10">+10</button>
+<button type="button" class="jump-btn minus" data-jump="-1">−1</button><button type="button" class="jump-btn minus" data-jump="-2">−2</button><button type="button" class="jump-btn minus" data-jump="-5">−5</button><button type="button" class="jump-btn minus" data-jump="-10">−10</button>
+</div><div class="jump-summary"><label for="jumpStartQuick">Starttal:</label><input id="jumpStartQuick" type="number" value="20" step="1"><span id="jumpCurrent" class="jump-current" aria-live="polite">Nu: 20</span></div>
+<div class="muted" style="margin-top:7px">Tryk på en grøn eller rød knap for at lave et hop. Brug Fortryd til at fjerne sidste hop.</div>
+<div class="jump-range"><div class="jump-range-title">Vælg tallinjens længde</div><div class="jump-range-fields"><label for="jumpMinQuick">Fra<input type="number" id="jumpMinQuick" value="0" step="1"></label><label for="jumpMaxQuick">Til<input type="number" id="jumpMaxQuick" value="100" step="1"></label></div><div class="jump-range-preset"><button type="button" data-range="0,20">0–20</button><button type="button" data-range="0,50">0–50</button><button type="button" data-range="0,100">0–100</button><button type="button" data-range="-20,20">−20 til 20</button></div><div class="jump-range-msg" id="jumpRangeMsg" role="status" aria-live="polite"></div></div>
+<div class="jump-goal" id="jumpGoalPanel">
+  <div class="jump-goal-head"><label class="jump-goal-switch" for="jumpGoalEnabled"><input id="jumpGoalEnabled" type="checkbox"> Vis et mål på tallinjen</label></div>
+  <div class="jump-goal-options" id="jumpGoalOptions" hidden><label for="jumpGoalValue">Land på:</label><input id="jumpGoalValue" type="number" value="40" step="1"><button type="button" id="jumpGoalRandom" class="secondary">Tilfældigt mål</button></div>
+  <div class="jump-goal-message" id="jumpGoalMessage" role="status" aria-live="polite"></div>
+</div></section><div id="sequenceBox" class="sequence" hidden></div><div class="feedback" id="feedback" aria-live="polite"></div><div class="buttons"><button class="primary" id="action">Ny opgave</button><button class="secondary" id="undo">↶ Fortryd</button><button class="secondary" id="clear">Ryd markeringer</button><button class="secondary" id="solution">Vis løsning</button></div></main><aside class="card sidebar"><h2 class="sidehead">Lærerens værktøjer</h2><div class="hint" id="teacherHint">Brug tallinjen til at få eleverne til at forklare, hvor de placerer tal, og hvorfor.</div><div id="pointAddPanel"><label class="toggle" for="addPoint"><input type="checkbox" id="addPoint"> Tilføj nyt punkt</label><div id="pointHelp">Træk i et eksisterende punkt for at flytte det. Slå dette til, når du vil sætte et nyt punkt.</div></div><div class="formrow"><div class="field"><label for="min">Fra</label><input id="min" type="number" value="0" step="1"></div><div class="field"><label for="max">Til</label><input id="max" type="number" value="100" step="1"></div></div><div class="field"><label for="step">Springstørrelse / mønster</label><select id="step"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="5">5</option><option value="10" selected>10</option><option value="20">20</option><option value="25">25</option><option value="-1">−1</option><option value="-2">−2</option><option value="-5">−5</option><option value="-10">−10</option></select></div><div class="field"><label for="start">Starttal til regnehop</label><input type="number" id="start" value="20"></div><div class="field"><label for="color">Markeringsfarve</label><select id="color"><option value="#e76f51">Koralfarvet</option><option value="#1685d2" selected>Blå</option><option value="#13a47a">Grøn</option><option value="#9b59b6">Lilla</option><option value="#e9a62d">Gul</option></select></div><label class="toggle"><input type="checkbox" id="labels" checked> Vis tal på inddelinger</label><label class="toggle"><input type="checkbox" id="snap" checked> Fastgør til hele trin</label><div class="status" id="status">Klar til undervisningen</div></aside></div><div class="footer">Dette værktøj er udviklet til undervisning. En digital tallinje er et supplement til konkrete materialer, elevernes egne skitser og matematiske samtaler.</div></div>
+<script>
+(()=>{'use strict';const $=id=>document.getElementById(id);const svg=$('line');let mode='explore',marks=[],history=[],round=0,target=null,previousFindTarget=null,jumpStart=20,jumpValue=10,sequence=[],missingIndex=0,showAnswer=false,scaleFraction=false;const NS='http://www.w3.org/2000/svg';function el(tag,attrs={},text){let e=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);if(text!==undefined)e.textContent=text;return e}function add(tag,attrs={},text){let e=el(tag,attrs,text);svg.append(e);return e}function range(){let a=Number($('min').value),b=Number($('max').value);if(!Number.isFinite(a)||!Number.isFinite(b))return[0,100];if(a>=b){b=a+10;$('max').value=b}return[a,b]}function px(v){const[a,b]=range();return 80+840*(v-a)/(b-a)}function numberAt(x){const[a,b]=range();return a+(Math.max(80,Math.min(920,x))-80)/840*(b-a)}function niceStep(span){let rough=span/10,pow=10**Math.floor(Math.log10(rough));return [1,2,5,10].map(x=>x*pow).find(x=>x>=rough)||10*pow}function fmt(v){return String(Math.round(v*1000)/1000).replace('.',',')}function tx(x,y,label,opt={}){add('text',{x,y,'text-anchor':opt.anchor||'middle','font-size':opt.size||19,'font-weight':opt.bold||650,fill:opt.color||'#294b65'},label)}function gcd(a,b){while(b){const t=b;b=a%b;a=t}return a||1}
+function fractionText(v){const n=Math.round(v*16);if(n===0)return '0';if(n===16)return '1';const g=gcd(Math.abs(n),16);return (n/g)+'/'+(16/g)}
+function markText(v){return mode==='fraction'?fractionText(v):fmt(v)}
+function jumpEquation(){const hops=marks.filter(m=>m.jump);if(!hops.length)return 'Start: '+fmt(jumpStart);const pieces=hops.map(m=>{const amount=Number(String(m.label).replace(',','.'));return (amount<0?' − ':' + ')+fmt(Math.abs(amount))});return fmt(jumpStart)+pieces.join('')+' = '+fmt(hops.at(-1).v)}function currentJumpValue(){return marks.filter(m=>m.jump).at(-1)?.v??jumpStart}
+function refreshJumpGoal(){
+ const active=$('jumpGoalEnabled').checked;
+ $('jumpGoalOptions').hidden=!active;
+ const msg=$('jumpGoalMessage');msg.classList.remove('reached');
+ if(!active){msg.textContent='';return}
+ const goal=Number($('jumpGoalValue').value),[lo,hi]=range();
+ if($('jumpGoalValue').value.trim()===''||!Number.isFinite(goal)||goal<lo||goal>hi){msg.textContent='Vælg et måltal mellem '+fmt(lo)+' og '+fmt(hi)+'.';return}
+ const current=currentJumpValue();
+ if(Math.abs(goal-current)<1e-9){msg.textContent='Målet er nået: '+fmt(goal)+'!';msg.classList.add('reached')}
+ else msg.textContent='Du er på '+fmt(current)+'. Der er '+fmt(Math.abs(goal-current))+' til målet '+fmt(goal)+'.';
+}
+function draw(){if(mode==='open')return;svg.replaceChildren();const[a,b]=range(),span=b-a;let tick=niceStep(span),baseline=154;add('line',{x1:65,y1:baseline,x2:935,y2:baseline,stroke:'#234968','stroke-width':5,'stroke-linecap':'round'});add('path',{d:'M935 154 l-14 -9 v18 z',fill:'#234968'});add('path',{d:'M65 154 l14 -9 v18 z',fill:'#234968'});let tickStart=Math.ceil(a/tick)*tick;for(let v=tickStart;v<=b+.00001;v+=tick){const x=px(v);add('line',{x1:x,y1:baseline-13,x2:x,y2:baseline+13,stroke:'#47738b','stroke-width':2});if($('labels').checked)tx(x,baseline+43,fmt(v),{size:18})}for(const v of [a,b]){if(Math.abs(v/tick-Math.round(v/tick))>.001){let x=px(v);add('line',{x1:x,y1:baseline-10,x2:x,y2:baseline+10,stroke:'#47738b','stroke-width':2});tx(x,baseline+43,fmt(v))}}if(mode==='fraction'){for(let v=0;v<=1.0001;v+=.25){let x=px(v);add('line',{x1:x,y1:baseline-18,x2:x,y2:baseline+18,stroke:'#175f9e','stroke-width':3});tx(x,baseline+72,v===0?'0':v===.25?'¼':v===.5?'½':v===.75?'¾':'1',{size:23,bold:800,color:'#175f9e'})}}marks.forEach((m,i)=>{let x=px(m.v);if(x<70||x>930)return;add('line',{x1:x,y1:baseline-10,x2:x,y2:baseline-50,stroke:m.color,'stroke-width':4});add('circle',{cx:x,cy:baseline,r:9,fill:m.color,stroke:'#fff','stroke-width':2});tx(x,baseline-61,mode==='fraction'?fractionText(m.v):(m.label??fmt(m.v)),{size:mode==='fraction'?25:21,bold:800,color:m.color});if(mode==='fraction')tx(x,baseline-85,fmt(m.v),{size:14,bold:650,color:m.color})});if(mode==='fraction'&&showAnswer&&target!==null){let x=px(target);add('line',{x1:x,y1:baseline-105,x2:x,y2:baseline+20,stroke:'#12a277','stroke-dasharray':'5 5','stroke-width':3});tx(x,baseline-115,fractionText(target),{size:22,color:'#087953',bold:800})}if(mode==='find'){if(showAnswer&&target!==null){let x=px(target);add('line',{x1:x,y1:baseline-78,x2:x,y2:baseline+15,stroke:'#12a277','stroke-dasharray':'5 5','stroke-width':3});tx(x,baseline-91,fmt(target),{color:'#087953',bold:800})}}if(mode==='jump'){$('jumpCurrent').textContent='Nu: '+fmt(marks.filter(m=>m.jump).at(-1)?.v??jumpStart);feedback(jumpEquation(),marks.some(m=>m.jump)?true:null);let x=px(jumpStart);if(x>=65&&x<=935){add('circle',{cx:x,cy:baseline,r:11,fill:'#e49d22',stroke:'#fff','stroke-width':3});tx(x,baseline-28,fmt(jumpStart),{color:'#b86a10',bold:800})}let position=jumpStart;marks.filter(x=>x.jump).forEach((m,i)=>{let x1=px(position),x2=px(m.v),mid=(x1+x2)/2,r=Math.max(18,Math.abs(x2-x1)*.32),side=i%2===0?-1:1;add('path',{d:`M ${x1} ${baseline} Q ${mid} ${baseline+side*r*2} ${x2} ${baseline}`,fill:'none',stroke:m.color,'stroke-width':4});tx(mid,baseline+side*(r+8),m.label,{size:18,color:m.color,bold:800});position=m.v})}if(mode==='jump'){
+ refreshJumpGoal();
+ if($('jumpGoalEnabled').checked){
+  const goalInput=$('jumpGoalValue').value.trim(),goal=Number(goalInput),[lo,hi]=range();
+  if(goalInput!==''&&Number.isFinite(goal)&&goal>=lo&&goal<=hi){
+   const gx=px(goal),reached=Math.abs(currentJumpValue()-goal)<1e-9;
+   add('line',{x1:gx,y1:baseline-95,x2:gx,y2:baseline+26,stroke:reached?'#159968':'#b78010','stroke-width':4,'stroke-dasharray':'8 5','pointer-events':'none'});
+   add('path',{d:`M ${gx-11} ${baseline-88} l11 -20 l11 20 z`,fill:reached?'#159968':'#b78010','pointer-events':'none'});
+   tx(gx,baseline-120,(reached?'MÅL NÅET ':'MÅL ')+fmt(goal),{size:20,bold:900,color:reached?'#0e7c54':'#95600c'});
+  }
+ }
+}if(mode==='sequence'){let vals=sequence;vals.filter((_,i)=>i!==missingIndex||showAnswer).forEach((v,i)=>{});if(sequence.length){let v=sequence[missingIndex];if(showAnswer&&v>=a&&v<=b){let x=px(v);add('circle',{cx:x,cy:baseline,r:11,fill:'#169c6f'});tx(x,baseline-28,fmt(v),{color:'#087953'})}}}add('rect',{x:65,y:98,width:870,height:105,fill:'transparent',style:'cursor:crosshair','aria-label':'Tryk her for at markere et tal'}).addEventListener('pointerdown',pointPointerDown)}function pick(v){let step=Number($('step').value),[a,b]=range();if(mode==='fraction'){return Math.max(a,Math.min(b,Math.round(v*16)/16))}if($('snap').checked){let snap=spanSnap(b-a);return Math.max(a,Math.min(b,Math.round(v/snap)*snap))}return Math.round(v*100)/100}function spanSnap(span){return span<=2?.05:span<=20?1:span<=100?1:span<=300?5:10}function svgCoords(e){const p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;const matrix=svg.getScreenCTM();if(!matrix)return {x:0,y:0};const r=p.matrixTransform(matrix.inverse());return {x:r.x,y:r.y}}
+function pointValue(e){return pick(numberAt(svgCoords(e).x))}
+let pointDrag=null;
+function nearMark(e){const pos=svgCoords(e);if(Math.abs(pos.y-154)>45)return -1;let best=-1,dist=26;for(let i=marks.length-1;i>=0;i--){if(marks[i].jump)continue;const d=Math.abs(px(marks[i].v)-pos.x);if(d<dist){dist=d;best=i}}return best}
+function pointPointerDown(e){if(mode==='sequence'||mode==='jump'||mode==='open')return;
+const idx=nearMark(e);
+if(idx>=0){pointDrag={idx,original:marks[idx].v,moved:false};svg.setPointerCapture(e.pointerId);e.preventDefault();return}
+if(mode==='find'){onPoint(e);return}
+if(!$('addPoint').checked)return;
+let pos=svgCoords(e);if(pos.x<65||pos.x>935||Math.abs(pos.y-154)>52)return;
+record();let v=pointValue(e);marks.push({v,color:$('color').value});$('addPoint').checked=false;
+feedback('Punkt ved '+markText(v)+' er tilføjet. Træk i det for at flytte det.',null);draw();e.preventDefault();}
+function pointPointerMove(e){if(!pointDrag)return;const pos=svgCoords(e);const idx=pointDrag.idx;if(!marks[idx])return;const v=pointValue(e);if(Math.abs(pos.x-px(pointDrag.original))>3)pointDrag.moved=true;marks[idx].v=v;if(marks[idx].label!==undefined)marks[idx].label=fmt(v);draw();e.preventDefault();}
+function pointPointerUp(e){if(!pointDrag)return;let d=pointDrag;pointDrag=null;
+try{if(svg.hasPointerCapture(e.pointerId))svg.releasePointerCapture(e.pointerId)}catch(err){}
+if(d.moved&&marks[d.idx]){history.push(marks.map((m,i)=>i===d.idx?{...m,v:d.original,label:m.label!==undefined?fmt(d.original):m.label}:{...m}));if(history.length>50)history.shift();if(mode==='find'&&target!==null){const v=marks[d.idx].v;const [a,b]=range();const ok=Math.abs(v-target)<=Math.max((b-a)*.04,.15);showAnswer=ok;feedback(ok?'Rigtigt! Du ramte tæt på '+fmt(target)+'.':'Du valgte '+fmt(v)+'. Prøv igen.',ok)}else feedback('Punktet er flyttet til '+markText(marks[d.idx].v)+'.',null)}draw();}
+svg.addEventListener('pointermove',pointPointerMove);
+svg.addEventListener('pointerup',pointPointerUp);
+svg.addEventListener('pointercancel',()=>{if(pointDrag){const d=pointDrag;pointDrag=null;if(marks[d.idx]){marks[d.idx].v=d.original;if(marks[d.idx].label!==undefined)marks[d.idx].label=fmt(d.original);draw()}}});function record(){history.push(marks.map(m=>({...m})));if(history.length>50)history.shift()}function feedback(t,good){$('feedback').textContent=t;$('feedback').className='feedback '+(good===true?'good':good===false?'bad':'')}function onPoint(e){let v=pointValue(e),color=$('color').value;if(mode==='sequence')return;if(mode==='find'){if(target===null)return;let[a,b]=range();let err=Math.abs(v-target);record();const oldIndex=marks.findIndex(m=>m.color===color);const newMark={v,color,label:fmt(v)};if(oldIndex>=0)marks[oldIndex]=newMark;else marks.push(newMark);let threshold=Math.max((b-a)*.04,.15);if(err<=threshold){feedback('Rigtigt! '+fmt(v)+' ligger tæt på '+fmt(target)+'. De andre farver bliver stående.',true);showAnswer=true}else{feedback('Du valgte '+fmt(v)+'. De andre farver bliver stående. Prøv igen, eller vis løsningen.',false)}draw();return}if(mode==='jump')return;record();let near=marks.findIndex(m=>Math.abs(m.v-v)<1e-7);if(near>=0&&marks[near].color===color)marks.splice(near,1);else marks.push({v,color});feedback('Hvad fortæller placeringen af tallet '+fmt(v)+'?',null);draw()}
+function setupMode(){marks=[];history=[];round=0;showAnswer=false;target=null;let info={explore:['UDFORSK','Tryk på tallinjen for at sætte mærker','Sammenlign placeringer, talafstande og størrelsesordner.','Brug talmærkerne til at diskutere tal og deres afstande.'],find:['PLACÉR TALLET','Hvor ligger tallet?','Vælg en farve, og placér dens markør. Markører i andre farver bliver stående.','Lad flere elever markere med hver deres farve, så I kan sammenligne deres bud.'],jump:['REGN MED HOP','Lav regnehop på tallinjen','Vælg starttal og springstørrelse. Hvert tryk lægger et nyt hop til.','Bed eleverne sammenligne mange små hop med få store hop.'],sequence:['TALMØNSTRE','Hvilket tal mangler i rækken?','Find reglen og udfyld hullet i rækken.','Bed eleverne forklare mønsterreglen, ikke bare sige svaret.'],open:['ÅBEN TALLINJE','Tegn to måder at regne på','Tegn hop med fingeren, og sammenlign de to strategier.','Lad to elever vise hver deres vej til resultatet. Diskutér, hvorfor begge kan være rigtige.'],fraction:['BRØKER','Hvor ligger brøken på tallinjen?','Tilføj et punkt: Brøken og decimaltallet vises straks. Træk punktet for at flytte det i trin på 1/16.','Sammenlign en brøk med dens decimaltal, og brug gerne en konkret brøkmodel ved siden af.']}[mode];$('modeLabel').textContent=info[0];$('taskTitle').textContent=info[1];$('subtitle').textContent=info[2];$('teacherHint').textContent=info[3];$('pointAddPanel').hidden=!['explore','fraction'].includes(mode);$('addPoint').checked=false;$('sequenceBox').hidden=mode!=='sequence';$('jumpPanel').hidden=mode!=='jump';if(mode==='jump'){syncJumpRangeInputs()}document.body.classList.toggle('jump-active',mode==='jump');$('lineWrap').hidden=mode==='sequence'||mode==='open';$('openTool').hidden=mode!=='open';if(mode==='open'&&Number($('max').value)===1){$('min').value=0;$('max').value=100;}$('solution').style.display=['find','sequence','fraction'].includes(mode)?'':'none';$('undo').style.display=mode==='sequence'?'none':'';$('clear').style.display=mode==='sequence'?'none':'';$('action').textContent=mode==='open'?'Ny, tom tavle':mode==='explore'?'Ryd og start igen':mode==='jump'?'Nulstil hop':'Ny opgave';$('scoreBadge').textContent=mode==='open'?'Sammenlign strategier':mode==='explore'||mode==='jump'?'Fri udforskning':mode==='find'?'Placér tallet':mode==='sequence'?'Find mønstret':'Undersøg brøker';if(mode==='fraction'){$('min').value=0;$('max').value=1;$('snap').checked=true}else if(mode==='sequence'){$('min').value=0;$('max').value=100}else if(Number($('max').value)-Number($('min').value)<=1){$('min').value=0;$('max').value=100;$('snap').checked=true}if(mode==='jump')syncJumpRangeInputs();newTask()}function newTask(){if(mode==='open'){openTool.render();return;}marks=[];history=[];showAnswer=false;feedback('',null);if(mode==='find'){let[a,b]=range(),span=b-a;// Choose across ALL integer positions rather than only ten-percent intervals.
+let lo=Math.ceil(a),hi=Math.floor(b);
+if(lo<=hi){
+  target=lo+Math.floor(Math.random()*(hi-lo+1));
+  if(hi>lo&&target===previousFindTarget){
+    target=lo+((target-lo+1+Math.floor(Math.random()*(hi-lo)))%(hi-lo+1));
+  }
+}else{
+  target=Math.round((a+Math.random()*span)*100)/100;
+}
+previousFindTarget=target;$('taskTitle').textContent='Placér '+fmt(target)+' på tallinjen';}if(mode==='fraction'){let vals=[.125,.25,.375,.5,.625,.75,.875];target=vals[Math.floor(Math.random()*vals.length)];$('taskTitle').textContent='Placér '+({'.125':'⅛','.25':'¼','.375':'⅜','.5':'½','.625':'⅝','.75':'¾','.875':'⅞'}[String(target)]||fmt(target));}if(mode==='jump'){jumpStart=Number($('jumpStartQuick').value);if(!Number.isFinite(jumpStart))jumpStart=20;$('start').value=jumpStart;$('taskTitle').textContent='Hop frem og tilbage på tallinjen';$('jumpCurrent').textContent='Nu: '+fmt(jumpStart);drawJumpRangeNotice(jumpStart);if(jumpStart<range()[0]||jumpStart>range()[1]){$('jumpStartQuick').value=range()[0];jumpStart=range()[0];$('start').value=jumpStart}}if(mode==='sequence'){let step=Number($('step').value);let[a,b]=range();let span=Math.abs(step)*5;let start=Math.floor(a+Math.random()*Math.max(1,b-a-span));sequence=Array.from({length:5},(_,i)=>start+i*step);missingIndex=1+Math.floor(Math.random()*3);renderSequence()}draw()}function renderSequence(){const p=$('sequenceBox');p.replaceChildren();sequence.forEach((v,i)=>{let d=document.createElement('div');d.className='seqitem'+(i===missingIndex?' missing':'');if(i!==missingIndex||showAnswer)d.textContent=fmt(v);else{let inp=document.createElement('input');inp.className='seqinput';inp.type='number';inp.placeholder='?';inp.setAttribute('aria-label','Manglende tal');inp.addEventListener('keydown',e=>{if(e.key==='Enter')checkSeq()});d.append(inp)}p.append(d)});if(!showAnswer){let b=document.createElement('button');b.className='primary';b.textContent='Tjek svar';b.onclick=checkSeq;p.append(b)}}function checkSeq(){let inp=$('sequenceBox').querySelector('input');if(!inp||inp.value==='')return;let v=Number(inp.value),right=sequence[missingIndex];if(v===right){showAnswer=true;feedback('Korrekt! Forskellen mellem tallene er '+fmt(Number($('step').value))+'.',true);renderSequence()}else feedback('Prøv igen. Hvad er forskellen mellem to tal ved siden af hinanden?',false)}function showSolution(){if(mode==='sequence'){showAnswer=true;renderSequence();feedback('Det manglende tal er '+fmt(sequence[missingIndex])+'.',null)}else if(['find','fraction'].includes(mode)){showAnswer=true;feedback('Det rigtige punkt er '+markText(target)+'.',null);draw()}}const openTool=(()=>{
+const os=$('openSvg'), colors=['#146cae','#d86d39'];let lanes=[[],[]],notes=['',''],lane=0,kind='hop',undoStack=[],drag=null,problem={a:64,b:28,op:'−'},showProblem=true,freeLine=false;
+const norm=(val)=>{const[a,b]=range();let step=$('snap').checked?spanSnap(b-a):.01;return Math.min(b,Math.max(a,Math.round(val/step)*step))};
+const xFor=v=>80+840*(v-range()[0])/(range()[1]-range()[0]);
+const valFor=x=>norm(numberAt(Math.max(80,Math.min(920,x))));
+const xp=e=>{const rect=os.getBoundingClientRect();return (e.clientX-rect.left)*1000/rect.width};
+const yp=e=>{const rect=os.getBoundingClientRect();return (e.clientY-rect.top)*420/rect.height};
+function elem(tag,attr={},txt){const n=document.createElementNS(NS,tag);Object.entries(attr).forEach(([k,v])=>n.setAttribute(k,v));if(txt!==undefined)n.textContent=txt;os.append(n);return n}
+const snapshot=()=>{undoStack.push(JSON.stringify({lanes,notes,problem,showProblem,freeLine,min:$('min').value,max:$('max').value}));if(undoStack.length>70)undoStack.shift()};
+const escSVG=s=>String(s);
+const pretty = v=>Number.isInteger(v)?String(v):String(Math.round(v*100)/100).replace('.',',');
+function syncProblem(){
+ $('problemDisplay').textContent=showProblem?`${pretty(problem.a)} ${problem.op} ${pretty(problem.b)} = ?`:'';
+ $('problemDisplay').hidden=!showProblem;
+ $('problemInput').value=`${pretty(problem.a)} ${problem.op} ${pretty(problem.b)}`;
+}
+function parseProblem(raw){
+ const match=raw.trim().replace(/,/g,'.').replace(/[–—−]/g,'-').match(/^([+-]?(?:\d+(?:\.\d+)?|\.\d+))\s*([+\-])\s*([+-]?(?:\d+(?:\.\d+)?|\.\d+))\s*(?:=\s*\?)?$/);
+ if(!match)return null;
+ const a=Number(match[1]), b=Number(match[3]);
+ if(!Number.isFinite(a)||!Number.isFinite(b)||Math.abs(a)>10000||Math.abs(b)>10000)return null;
+ return {a,b,op:match[2]==='-'?'−':'+'};
+}
+function autoRange(){
+ let answer=problem.op==='+'?problem.a+problem.b:problem.a-problem.b;
+ const low=Math.min(0,problem.a,answer),high=Math.max(0,problem.a,answer);
+ let pad=Math.max(5,Math.ceil((high-low)*.12));
+ $('min').value=Math.floor((low-pad)/5)*5;
+ $('max').value=Math.ceil((high+pad)/5)*5;
+ if(Number($('min').value)===Number($('max').value))$('max').value=Number($('min').value)+10;
+}
+function setProblem(v){
+ const parsed=parseProblem(v);
+ if(!parsed){$('problemStatus').textContent='Skriv et regnestykke med + eller −, fx 64 − 28.';return;}
+ snapshot();problem=parsed;showProblem=true;autoRange();
+ lanes=[[],[]];notes=['',''];$('noteA').value='';$('noteB').value='';
+ $('problemStatus').textContent='Opgaven er klar – begge tallinjer er tomme.';$('openCheckResult').textContent='';
+ syncProblem();render();
+}
+$('problemSet').onclick=()=>setProblem($('problemInput').value);
+$('problemInput').addEventListener('keydown',e=>{if(e.key==='Enter')setProblem(e.currentTarget.value)});
+$('problemRandom').onclick=()=>{
+ const tasks=[[38,27,'+'],[64,28,'−'],[75,19,'−'],[46,38,'+'],[92,47,'−'],[57,26,'+'],[103,58,'−'],[29,46,'+'],[84,36,'−'],[125,75,'+'],[105,68,'−'],[18,57,'+'],[71,29,'−'],[140,65,'−'],[63,58,'+']];
+ const choices=tasks.filter(x=>x[0]!==problem.a||x[1]!==problem.b|| (x[2]==='-'?'−':'+')!==problem.op);
+ const [a,b,op]=choices[Math.floor(Math.random()*choices.length)];setProblem(`${a} ${op} ${b}`);
+};
+$('problemClear').onclick=()=>{snapshot();showProblem=false;$('problemStatus').textContent='Opgaven er skjult. Tallinjerne er bevaret.';syncProblem();render()};
+syncProblem();
+
+function render(){os.replaceChildren();const [a,b]=range(),st=niceStep(b-a),labelY=[184,389],ys=[133,337];
+for(let i=0;i<2;i++){
+const y=ys[i],c=colors[i];elem('rect',{x:7,y:y-110,width:986,height:183,rx:15,fill:i===lane?'#eaf6ff':'#f8fbfd',stroke:i===lane?c:'#d3e2ea','stroke-width':i===lane?2:1});
+elem('text',{x:25,y:y-80,fill:c,'font-size':24,'font-weight':900},'STRATEGI '+(i===0?'A':'B'));
+elem('line',{x1:67,y1:y,x2:940,y2:y,stroke:'#254e69','stroke-width':4,'stroke-linecap':'round'});
+elem('path',{d:`M940 ${y} l-12 -8 v16 z`,fill:'#254e69'});elem('path',{d:`M67 ${y} l12 -8 v16 z`,fill:'#254e69'});
+for(let v=Math.ceil(a/st)*st;!freeLine&&v<=b+1e-8;v+=st){let x=xFor(v);elem('line',{x1:x,y1:y-10,x2:x,y2:y+10,stroke:'#567a8b','stroke-width':1.8});if($('labels').checked&&!freeLine)elem('text',{x,y:y+34,'text-anchor':'middle',fill:'#46667a','font-size':17},fmt(v))}
+for(const v of (freeLine?[]:[a,b]))if(Math.abs(v/st-Math.round(v/st))>.0001){const x=xFor(v);elem('line',{x1:x,y1:y-10,x2:x,y2:y+10,stroke:'#567a8b','stroke-width':2});elem('text',{x,y:y+34,'text-anchor':'middle',fill:'#46667a','font-size':17},fmt(v))}
+for(const [idx,item] of lanes[i].entries()){
+if(item.type==='point'){
+let x=xFor(item.value);if(x<65||x>943)continue;
+elem('circle',{cx:x,cy:y,r:9,fill:c,stroke:'white','stroke-width':2});elem('text',{x,y:y-18,'text-anchor':'middle',fill:c,'font-size':22,'font-weight':850},item.label||fmt(item.value));
+elem('circle',{cx:x,cy:y-12,r:25,fill:'transparent',style:'cursor:grab','data-ln':i,'data-idx':idx,'data-end':'value'});
+}else{
+let x1=xFor(item.from),x2=xFor(item.to);if(x1<65||x1>943||x2<65||x2>943)continue;
+let mid=(x1+x2)/2, height=Math.min(68,Math.max(30,Math.abs(x2-x1)*.25)),curve=`M${x1} ${y-8} Q ${mid} ${y-height*2-8} ${x2} ${y-8}`;
+elem('path',{d:curve,fill:'none',stroke:c,'stroke-width':4,'stroke-linecap':'round'});
+let arrow=x2>=x1?1:-1;elem('path',{d:`M${x2} ${y-8} l${-arrow*12} -8 l${-arrow*2} 12 z`,fill:c});
+let t=elem('text',{x:mid,y:y-height-23,'text-anchor':'middle',fill:c,'font-size':20,'font-weight':850},item.label||((item.to-item.from>0?'+':'')+fmt(item.to-item.from)));
+elem('path',{d:curve,fill:'none',stroke:'transparent','stroke-width':25,style:'cursor:grab','data-ln':i,'data-idx':idx,'data-end':'auto'});for(const [k,xx] of [['from',x1],['to',x2]])elem('circle',{cx:xx,cy:y-8,r:15,fill:c,opacity:0.15,stroke:c,'stroke-width':1,'data-ln':i,'data-idx':idx,'data-end':k,style:'cursor:ew-resize'});
+}
+}
+}
+if(drag){const y=ys[drag.lane],from=xFor(drag.from),to=xFor(drag.to);if(drag.kind==='hop')elem('path',{d:`M${from} ${y-8} Q${(from+to)/2} ${y-95} ${to} ${y-8}`,stroke:colors[drag.lane],fill:'none','stroke-width':3,'stroke-dasharray':'8 7'});else elem('circle',{cx:to,cy:y,r:12,fill:colors[drag.lane],opacity:.5})}
+}
+function edit(i,index){const item=lanes[i][index];const defaultName=item.label||((item.type==='point')?fmt(item.value):(item.to-item.from>0?'+':'')+fmt(item.to-item.from));const val=prompt('Hvad skal der stå ved mærket/hoppet? (Slet teksten for automatisk værdi)',defaultName);if(val===null)return;snapshot();item.label=val.trim().slice(0,24);render()}
+function clearAll(){snapshot();lanes=[[],[]];notes=['',''];$('noteA').value='';$('noteB').value='';render()}
+function clearLane(){snapshot();lanes[lane]=[];notes[lane]='';$('note'+(lane===0?'A':'B')).value='';render()}
+function undo(){if(!undoStack.length)return;const state=JSON.parse(undoStack.pop());lanes=state.lanes;notes=state.notes;problem=state.problem||problem;showProblem=state.showProblem??showProblem;freeLine=!!state.freeLine;$('openFree').checked=freeLine;if(state.min!==undefined){$('min').value=state.min;$('max').value=state.max;}syncProblem();$('noteA').value=notes[0];$('noteB').value=notes[1];render()}
+function setLane(v){lane=v;document.querySelectorAll('#openTool [data-lane]').forEach(b=>b.classList.toggle('current',Number(b.dataset.lane)===lane));render()}
+function setKind(v){kind=v;document.querySelectorAll('#openTool [data-kind]').forEach(b=>b.classList.toggle('current',b.dataset.kind===kind))}
+os.addEventListener('pointerdown',e=>{
+ if(mode!=='open')return;
+ const hit=e.target.closest('[data-idx]');
+ const yy=yp(e);if(yy<20||yy>410)return;
+ const ln=hit?Number(hit.dataset.ln):(yy<220?0:1);setLane(ln);
+ if(hit){
+  const idx=Number(hit.dataset.idx);
+  if(kind==='delete'){snapshot();lanes[ln].splice(idx,1);render();return;}
+  if(kind==='move'){
+   const item=lanes[ln][idx];let end=hit.dataset.end;
+   if(end==='auto'&&item.type==='hop'){const x=xp(e);end=Math.abs(x-xFor(item.from))<Math.abs(x-xFor(item.to))?'from':'to'}
+   drag={mode:'move',ln,idx,end,origin:valFor(xp(e)),next:valFor(xp(e)),moved:false};
+   os.setPointerCapture(e.pointerId);return;
+  }
+ }
+ if(kind==='move'||kind==='delete')return;
+ drag={mode:'new',ln,kind,from:valFor(xp(e)),to:valFor(xp(e))};
+ os.setPointerCapture(e.pointerId);
+});
+os.addEventListener('pointermove',e=>{
+ if(!drag)return;
+ if(drag.mode==='move'){
+  drag.next=valFor(xp(e));if(Math.abs(xp(e)-xFor(drag.origin))>7)drag.moved=true;
+  return;
+ }
+ drag.to=valFor(xp(e));render();
+});
+os.addEventListener('pointerup',e=>{
+ if(!drag)return;let d=drag;drag=null;
+ if(d.mode==='move'){
+  if(!d.moved){edit(d.ln,d.idx);return;}
+  let it=lanes[d.ln][d.idx];if(!it)return;
+  snapshot();let delta=d.next-d.origin;
+  if(it.type==='point')it.value=norm(it.value+delta);
+  else if(d.end==='from')it.from=norm(it.from+delta);
+  else if(d.end==='to')it.to=norm(it.to+delta);
+  if(it.type==='hop'&&it.from===it.to)it.to=norm(it.to+(it.to<range()[1]?1:-1));
+  render();return;
+ }
+ if(d.kind==='hop'&&d.from===d.to){render();return}
+ snapshot();lanes[d.ln].push(d.kind==='hop'?{type:'hop',from:d.from,to:d.to,label:''}:{type:'point',value:d.to,label:''});render();
+});
+os.addEventListener('pointercancel',()=>{drag=null;render()});
+document.querySelectorAll('#openTool [data-lane]').forEach(b=>b.addEventListener('click',()=>setLane(Number(b.dataset.lane))));
+document.querySelectorAll('#openTool [data-kind]').forEach(b=>b.addEventListener('click',()=>setKind(b.dataset.kind)));
+$('openClearLane').onclick=clearLane;
+$('openSwap').onclick=()=>{snapshot();[lanes[0],lanes[1]]=[lanes[1],lanes[0]];[notes[0],notes[1]]=[notes[1],notes[0]];$('noteA').value=notes[0];$('noteB').value=notes[1];render()};
+for(let i=0;i<2;i++)$('note'+(i===0?'A':'B')).addEventListener('change',e=>{snapshot();notes[i]=e.target.value});
+$('openExport').onclick=()=>{let clone=os.cloneNode(true);clone.setAttribute('xmlns',NS);clone.setAttribute('width','1200');clone.setAttribute('height','504');
+let exportSvg=document.createElementNS(NS,'svg');exportSvg.setAttribute('xmlns',NS);exportSvg.setAttribute('width','1200');exportSvg.setAttribute('height','680');exportSvg.setAttribute('viewBox','0 0 1000 566');
+let bg=document.createElementNS(NS,'rect');bg.setAttribute('width','1000');bg.setAttribute('height','566');bg.setAttribute('fill','#fff');exportSvg.append(bg);
+let heading=document.createElementNS(NS,'text');heading.setAttribute('x','500');heading.setAttribute('y','39');heading.setAttribute('font-size','29');heading.setAttribute('font-weight','900');heading.setAttribute('text-anchor','middle');heading.setAttribute('fill','#154c78');heading.textContent=showProblem?`${pretty(problem.a)} ${problem.op} ${pretty(problem.b)} = ?`:'To regnestrategier';exportSvg.append(heading);
+let group=document.createElementNS(NS,'g');group.setAttribute('transform','translate(0 48)');clone.removeAttribute('width');clone.removeAttribute('height');group.append(clone);exportSvg.append(group);
+for(let i=0;i<2;i++){let t=document.createElementNS(NS,'text');t.setAttribute('x','25');t.setAttribute('y',String(500+i*27));t.setAttribute('font-size','17');t.setAttribute('fill','#294d63');t.textContent=`Strategi ${i?'B':'A'}: `+(notes[i]||'');exportSvg.append(t)}
+let blob=new Blob([new XMLSerializer().serializeToString(exportSvg)],{type:'image/svg+xml;charset=utf-8'});let url=URL.createObjectURL(blob);let link=document.createElement('a');link.href=url;link.download='aaben-tallinje-strategier.svg';link.click();setTimeout(()=>URL.revokeObjectURL(url),1500)};
+
+$('openFree').onchange=e=>{freeLine=e.target.checked;render()};
+function getSolution(){return problem.op==='+'?problem.a+problem.b:problem.a-problem.b}
+$('openCheck').onclick=()=>{
+ const out=$('openCheckResult');out.className='checkresult';
+ if(!showProblem){out.textContent='Skriv først et regnestykke, så hoppene kan kontrolleres.';out.classList.add('warn');return}
+ const expected=getSolution(),lines=[];
+ for(let i=0;i<2;i++){
+  const hops=lanes[i].filter(x=>x.type==='hop');
+  if(!hops.length){lines.push(`Strategi ${i?'B':'A'}: Ingen hop tegnet endnu.`);continue}
+  const eps=Math.max(0.011,(range()[1]-range()[0])*0.00001);
+  const eq=(x,y)=>Math.abs(x-y)<eps;
+  const start=hops[0].from,finish=hops.at(-1).to;
+  const connected=hops.every((h,k)=>k===0||eq(h.from,hops[k-1].to));
+  const valid=(eq(start,problem.a)&&eq(finish,expected))||(eq(start,expected)&&eq(finish,problem.a));
+  if(!connected)lines.push(`Strategi ${i?'B':'A'}: Hoppene hænger ikke sammen. Slutningen på ét hop skal være starten på det næste.`);
+  else if(!valid)lines.push(`Strategi ${i?'B':'A'}: Hoppene går fra ${pretty(start)} til ${pretty(finish)}, men regnestykket handler om ${pretty(problem.a)} og ${pretty(expected)}.`);
+  else lines.push(`Strategi ${i?'B':'A'}: Hoppene hænger sammen og forbinder ${pretty(start)} og ${pretty(finish)}. Drøft med klassen, om hvert hop giver faglig mening.`);
+ }
+ out.textContent=lines.join('  |  ');
+ out.classList.add(lines.some(x=>x.includes('ikke')||x.includes('Ingen')||x.includes('men regnestykket'))?'warn':'ok');
+};
+function download(name,blob){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1800)}
+$('openSave').onclick=()=>{
+ notes=[$('noteA').value,$('noteB').value];
+ const state={format:'spil-til-klassen-tallinje',version:4,lanes,notes,problem,showProblem,freeLine,min:$('min').value,max:$('max').value,snap:$('snap').checked,labels:$('labels').checked};
+ download('tallinje-undervisning.json',new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));
+};
+$('openLoad').onclick=()=>$('openLoadFile').click();
+$('openLoadFile').onchange=async e=>{
+ const file=e.target.files[0];if(!file)return;
+ try{
+  if(file.size>1000000)throw Error('Filen er for stor.');
+  const data=JSON.parse(await file.text());
+  if(data.format!=='spil-til-klassen-tallinje'||data.version!==4||!Array.isArray(data.lanes)||data.lanes.length!==2)throw Error('Dette er ikke en tallinje-fil fra version 4.');
+  const parsed=data.lanes.map(arr=>{
+   if(!Array.isArray(arr)||arr.length>200)throw Error('Ugyldige markeringer.');
+   return arr.map(item=>{
+    if(item.type==='point'&&Number.isFinite(item.value))return {type:'point',value:item.value,label:String(item.label||'').slice(0,24)};
+    if(item.type==='hop'&&Number.isFinite(item.from)&&Number.isFinite(item.to))return {type:'hop',from:item.from,to:item.to,label:String(item.label||'').slice(0,24)};
+    throw Error('Ugyldig markering i filen.');
+   })
+  });
+  if(!Number.isFinite(Number(data.min))||!Number.isFinite(Number(data.max))||Number(data.min)>=Number(data.max)||Number(data.max)-Number(data.min)>100000)throw Error('Ugyldigt talområde.');
+  snapshot();lanes=parsed;notes=[String(data.notes?.[0]||'').slice(0,140),String(data.notes?.[1]||'').slice(0,140)];
+  if(data.problem&&Number.isFinite(data.problem.a)&&Number.isFinite(data.problem.b)&&['+','−'].includes(data.problem.op))problem=data.problem;
+  showProblem=!!data.showProblem;freeLine=!!data.freeLine;
+  $('min').value=data.min;$('max').value=data.max;$('snap').checked=!!data.snap;$('labels').checked=!!data.labels;$('openFree').checked=freeLine;
+  $('noteA').value=notes[0];$('noteB').value=notes[1];syncProblem();render();
+  $('problemStatus').textContent='Den gemte undervisning er indlæst.';
+ }catch(err){$('problemStatus').textContent='Kunne ikke åbne filen: '+err.message}
+ e.target.value='';
+};
+const presets={friends:[8,7,'+'],bridge:[38,27,'+'],compensation:[64,28,'−'],negative:[-4,9,'+'],double:[75,36,'+']};
+document.querySelectorAll('[data-preset]').forEach(b=>b.addEventListener('click',()=>{const [a,c,op]=presets[b.dataset.preset];setProblem(`${a} ${op} ${c}`)}));
+return{render,clearAll,clearLane,undo};})();
+$('modes').addEventListener('click',e=>{const b=e.target.closest('[data-mode]');if(!b)return;mode=b.dataset.mode;$('modes').querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));setupMode()});function syncJumpRangeInputs(){$('jumpMinQuick').value=$('min').value;$('jumpMaxQuick').value=$('max').value}
+function drawJumpRangeNotice(v){const [a,b]=range();$('jumpRangeMsg').textContent=(v<a||v>b)?'Starttallet ligger uden for tallinjen. Det sættes til '+fmt(a)+'.':''}
+function setJumpRange(a,b){if(!Number.isFinite(a)||!Number.isFinite(b)||a>=b){$('jumpRangeMsg').textContent='Vælg to tal, hvor Fra er mindre end Til.';return false}if(b-a>100000){$('jumpRangeMsg').textContent='Vælg en tallinje på højst 100.000 tal.';return false}const start=Number($('jumpStartQuick').value);if(start<a||start>b){$('jumpRangeMsg').textContent='Starttallet er uden for området. Vælg et starttal mellem '+fmt(a)+' og '+fmt(b)+'.';return false}
+$('min').value=a;$('max').value=b;syncJumpRangeInputs();$('jumpRangeMsg').textContent='';marks=[];history=[];jumpStart=start;$('start').value=start;draw();return true}
+
+function addJump(step){if(mode!=='jump')return;let from=marks.filter(m=>m.jump).at(-1)?.v??jumpStart;let to=from+step;const [a,b]=range();if(to<a||to>b){$('jumpRangeMsg').textContent='Hoppet ender på '+fmt(to)+', uden for linjen ('+fmt(a)+' til '+fmt(b)+'). Gør linjen længere eller vælg et andet hop.';return}$('jumpRangeMsg').textContent='';record();marks.push({v:to,color:step>0?'#16875f':'#cb5b43',label:(step>0?'+':'')+fmt(step),jump:true});draw()}
+$('jumpGoalEnabled').addEventListener('change',()=>{refreshJumpGoal();draw()});
+$('jumpGoalValue').addEventListener('input',()=>{refreshJumpGoal();draw()});
+$('jumpGoalRandom').addEventListener('click',()=>{
+ const [lo,hi]=range(),first=Math.ceil(lo),last=Math.floor(hi);
+ if(first>last){$('jumpGoalMessage').textContent='Tallinjen har ingen hele tal i det valgte område.';return}
+ let goal=first+Math.floor(Math.random()*(last-first+1));
+ if(last>first&&goal===currentJumpValue())goal=goal===last?first:goal+1;
+ $('jumpGoalValue').value=goal;draw();
+});
+$('jumpControls').addEventListener('click',e=>{let btn=e.target.closest('[data-jump]');if(btn)addJump(Number(btn.dataset.jump))});
+$('jumpRangeMsg').textContent='';
+['jumpMinQuick','jumpMaxQuick'].forEach(id=>$(id).addEventListener('change',()=>{const a=$('jumpMinQuick').value.trim()===''?NaN:Number($('jumpMinQuick').value),b=$('jumpMaxQuick').value.trim()===''?NaN:Number($('jumpMaxQuick').value);setJumpRange(a,b)}));
+document.querySelectorAll('[data-range]').forEach(button=>button.addEventListener('click',()=>{const [a,b]=button.dataset.range.split(',').map(Number);if(!setJumpRange(a,b)){// Reset starttal til områdets første tal, så den valgte længde altid kan bruges.
+$('jumpStartQuick').value=a;setJumpRange(a,b)} }));
+$('jumpStartQuick').addEventListener('change',()=>{if(mode==='jump')newTask()});
+$('action').onclick=()=>{if(mode==='open'){if(confirm('Vil du rydde begge strategier?'))openTool.clearAll();}else newTask()};$('clear').onclick=()=>{if(mode==='open'){openTool.clearLane();return}record();marks=[];feedback('Tallinjen er ryddet.');draw()};$('undo').onclick=()=>{if(mode==='open'){openTool.undo();return}if(history.length){marks=history.pop();feedback('Sidste markering er fortrudt.');draw()}};$('solution').onclick=showSolution;['min','max','labels','snap'].forEach(id=>$(id).addEventListener('change',()=>{if(mode==='fraction'&&id==='min')return;if(mode==='open')openTool.render();else draw()}));$('step').addEventListener('change',()=>{if(mode==='jump'||mode==='sequence')newTask()});$('start').addEventListener('change',()=>{if(mode==='jump')newTask()});$('full').onclick=()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.()};setupMode();})();
+</script></body></html>
