@@ -1,354 +1,424 @@
-// Ord til spillet. Tilføj flere linjer med da, en og cat.
-// Billeder placeres i billeder/<kategori>/<dansk ord>.png eller .jpg/.webp/.svg
+// Tilføj nye ord med da, en, de og cat. Billedfilen navngives altid efter det danske ord.
+// Eksempel: billeder/Dyr/Hund.jpg bruges også til Dog og Hund på engelsk/tysk.
 window.ORDLISTE = [
   {
     "da": "Æble",
     "en": "Apple",
-    "cat": "Frugt og grønt"
+    "cat": "Frugt og grønt",
+    "de": "Apfel"
   },
   {
     "da": "Pære",
     "en": "Pear",
-    "cat": "Frugt og grønt"
+    "cat": "Frugt og grønt",
+    "de": "Birne"
   },
   {
     "da": "Banan",
     "en": "Banana",
-    "cat": "Frugt og grønt"
+    "cat": "Frugt og grønt",
+    "de": "Banane"
   },
   {
     "da": "Appelsin",
     "en": "Orange",
-    "cat": "Frugt og grønt"
+    "cat": "Frugt og grønt",
+    "de": "Orange"
   },
   {
     "da": "Citron",
     "en": "Lemon",
-    "cat": "Frugt og grønt"
+    "cat": "Frugt og grønt",
+    "de": "Zitrone"
   },
   {
     "da": "Jordbær",
     "en": "Strawberry",
-    "cat": "Frugt og grønt"
+    "cat": "Frugt og grønt",
+    "de": "Erdbeere"
   },
   {
     "da": "Vandmelon",
     "en": "Watermelon",
-    "cat": "Frugt og grønt"
+    "cat": "Frugt og grønt",
+    "de": "Wassermelone"
   },
   {
     "da": "Gulerod",
     "en": "Carrot",
-    "cat": "Frugt og grønt"
+    "cat": "Frugt og grønt",
+    "de": "Karotte"
   },
   {
     "da": "Tomat",
     "en": "Tomato",
-    "cat": "Frugt og grønt"
+    "cat": "Frugt og grønt",
+    "de": "Tomate"
   },
   {
     "da": "Broccoli",
     "en": "Broccoli",
-    "cat": "Frugt og grønt"
+    "cat": "Frugt og grønt",
+    "de": "Brokkoli"
   },
   {
     "da": "Vindruer",
     "en": "Grapes",
-    "cat": "Frugt og grønt"
+    "cat": "Frugt og grønt",
+    "de": "Trauben"
   },
   {
     "da": "Kartoffel",
     "en": "Potato",
-    "cat": "Frugt og grønt"
+    "cat": "Frugt og grønt",
+    "de": "Kartoffel"
   },
   {
     "da": "Bog",
     "en": "Book",
-    "cat": "Skole"
+    "cat": "Skole",
+    "de": "Buch"
   },
   {
     "da": "Blyant",
     "en": "Pencil",
-    "cat": "Skole"
+    "cat": "Skole",
+    "de": "Bleistift"
   },
   {
     "da": "Saks",
     "en": "Scissors",
-    "cat": "Skole"
+    "cat": "Skole",
+    "de": "Schere"
   },
   {
     "da": "Lineal",
     "en": "Ruler",
-    "cat": "Skole"
+    "cat": "Skole",
+    "de": "Lineal"
   },
   {
     "da": "Skoletaske",
     "en": "School bag",
-    "cat": "Skole"
+    "cat": "Skole",
+    "de": "Schulranzen"
   },
   {
     "da": "Notesbog",
     "en": "Notebook",
-    "cat": "Skole"
+    "cat": "Skole",
+    "de": "Notizbuch"
   },
   {
     "da": "Computer",
     "en": "Computer",
-    "cat": "Skole"
+    "cat": "Skole",
+    "de": "Computer"
   },
   {
     "da": "Tavle",
     "en": "Blackboard",
-    "cat": "Skole"
+    "cat": "Skole",
+    "de": "Tafel"
   },
   {
     "da": "Drikkedunk",
     "en": "Water bottle",
-    "cat": "Skole"
+    "cat": "Skole",
+    "de": "Trinkflasche"
   },
   {
     "da": "Lim",
     "en": "Glue",
-    "cat": "Skole"
+    "cat": "Skole",
+    "de": "Kleber"
   },
   {
     "da": "Stol",
     "en": "Chair",
-    "cat": "Hjemmet"
+    "cat": "Hjemmet",
+    "de": "Stuhl"
   },
   {
     "da": "Bord",
     "en": "Table",
-    "cat": "Hjemmet"
+    "cat": "Hjemmet",
+    "de": "Tisch"
   },
   {
     "da": "Seng",
     "en": "Bed",
-    "cat": "Hjemmet"
+    "cat": "Hjemmet",
+    "de": "Bett"
   },
   {
     "da": "Dør",
     "en": "Door",
-    "cat": "Hjemmet"
+    "cat": "Hjemmet",
+    "de": "Tür"
   },
   {
     "da": "Vindue",
     "en": "Window",
-    "cat": "Hjemmet"
+    "cat": "Hjemmet",
+    "de": "Fenster"
   },
   {
     "da": "Lampe",
     "en": "Lamp",
-    "cat": "Hjemmet"
+    "cat": "Hjemmet",
+    "de": "Lampe"
   },
   {
     "da": "Sofa",
     "en": "Sofa",
-    "cat": "Hjemmet"
+    "cat": "Hjemmet",
+    "de": "Sofa"
   },
   {
     "da": "Tandbørste",
     "en": "Toothbrush",
-    "cat": "Hjemmet"
+    "cat": "Hjemmet",
+    "de": "Zahnbürste"
   },
   {
     "da": "Plante",
     "en": "Plant",
-    "cat": "Hjemmet"
+    "cat": "Hjemmet",
+    "de": "Pflanze"
   },
   {
     "da": "Fjernsyn",
     "en": "Television",
-    "cat": "Hjemmet"
+    "cat": "Hjemmet",
+    "de": "Fernseher"
   },
   {
     "da": "Nøgle",
     "en": "Key",
-    "cat": "Hjemmet"
+    "cat": "Hjemmet",
+    "de": "Schlüssel"
   },
   {
     "da": "Ur",
     "en": "Clock",
-    "cat": "Hjemmet"
+    "cat": "Hjemmet",
+    "de": "Uhr"
   },
   {
     "da": "Bil",
     "en": "Car",
-    "cat": "Transport"
+    "cat": "Transport",
+    "de": "Auto"
   },
   {
     "da": "Bus",
     "en": "Bus",
-    "cat": "Transport"
+    "cat": "Transport",
+    "de": "Bus"
   },
   {
     "da": "Cykel",
     "en": "Bicycle",
-    "cat": "Transport"
+    "cat": "Transport",
+    "de": "Fahrrad"
   },
   {
     "da": "Tog",
     "en": "Train",
-    "cat": "Transport"
+    "cat": "Transport",
+    "de": "Zug"
   },
   {
     "da": "Fly",
     "en": "Airplane",
-    "cat": "Transport"
+    "cat": "Transport",
+    "de": "Flugzeug"
   },
   {
     "da": "Sejlbåd",
     "en": "Sailboat",
-    "cat": "Transport"
+    "cat": "Transport",
+    "de": "Segelboot"
   },
   {
     "da": "Traktor",
     "en": "Tractor",
-    "cat": "Transport"
+    "cat": "Transport",
+    "de": "Traktor"
   },
   {
     "da": "Lastbil",
     "en": "Truck",
-    "cat": "Transport"
+    "cat": "Transport",
+    "de": "Lastwagen"
   },
   {
     "da": "Sol",
     "en": "Sun",
-    "cat": "Vejr"
+    "cat": "Vejr",
+    "de": "Sonne"
   },
   {
     "da": "Regn",
     "en": "Rain",
-    "cat": "Vejr"
+    "cat": "Vejr",
+    "de": "Regen"
   },
   {
     "da": "Sky",
     "en": "Cloud",
-    "cat": "Vejr"
+    "cat": "Vejr",
+    "de": "Wolke"
   },
   {
     "da": "Sne",
     "en": "Snow",
-    "cat": "Vejr"
+    "cat": "Vejr",
+    "de": "Schnee"
   },
   {
     "da": "Regnbue",
     "en": "Rainbow",
-    "cat": "Vejr"
+    "cat": "Vejr",
+    "de": "Regenbogen"
   },
   {
     "da": "Hund",
     "en": "Dog",
-    "cat": "Dyr"
+    "cat": "Dyr",
+    "de": "Hund"
   },
   {
     "da": "Kat",
     "en": "Cat",
-    "cat": "Dyr"
+    "cat": "Dyr",
+    "de": "Katze"
   },
   {
     "da": "Fisk",
     "en": "Fish",
-    "cat": "Dyr"
+    "cat": "Dyr",
+    "de": "Fisch"
   },
   {
     "da": "Fugl",
     "en": "Bird",
-    "cat": "Dyr"
+    "cat": "Dyr",
+    "de": "Vogel"
   },
   {
     "da": "Sommerfugl",
     "en": "Butterfly",
-    "cat": "Dyr"
+    "cat": "Dyr",
+    "de": "Schmetterling"
   },
   {
     "da": "Kanin",
     "en": "Rabbit",
-    "cat": "Dyr"
+    "cat": "Dyr",
+    "de": "Kaninchen"
   },
   {
     "da": "T-shirt",
     "en": "T-shirt",
-    "cat": "Tøj"
+    "cat": "Tøj",
+    "de": "T-Shirt"
   },
   {
     "da": "Bukser",
     "en": "Trousers",
-    "cat": "Tøj"
+    "cat": "Tøj",
+    "de": "Hose"
   },
   {
     "da": "Kjole",
     "en": "Dress",
-    "cat": "Tøj"
+    "cat": "Tøj",
+    "de": "Kleid"
   },
   {
     "da": "Sko",
     "en": "Shoe",
-    "cat": "Tøj"
+    "cat": "Tøj",
+    "de": "Schuh"
   },
   {
     "da": "Hat",
     "en": "Hat",
-    "cat": "Tøj"
+    "cat": "Tøj",
+    "de": "Hut"
   },
   {
     "da": "Sokker",
     "en": "Socks",
-    "cat": "Tøj"
+    "cat": "Tøj",
+    "de": "Socken"
   },
   {
     "da": "Øje",
     "en": "Eye",
-    "cat": "Kroppen"
+    "cat": "Kroppen",
+    "de": "Auge"
   },
   {
     "da": "Hånd",
     "en": "Hand",
-    "cat": "Kroppen"
+    "cat": "Kroppen",
+    "de": "Hand"
   },
   {
     "da": "Fod",
     "en": "Foot",
-    "cat": "Kroppen"
+    "cat": "Kroppen",
+    "de": "Fuß"
   },
   {
     "da": "Øre",
     "en": "Ear",
-    "cat": "Kroppen"
+    "cat": "Kroppen",
+    "de": "Ohr"
   },
   {
     "da": "Næse",
     "en": "Nose",
-    "cat": "Kroppen"
+    "cat": "Kroppen",
+    "de": "Nase"
   },
   {
     "da": "Pizza",
     "en": "Pizza",
-    "cat": "Mad og drikke"
+    "cat": "Mad og drikke",
+    "de": "Pizza"
   },
   {
     "da": "Brød",
     "en": "Bread",
-    "cat": "Mad og drikke"
+    "cat": "Mad og drikke",
+    "de": "Brot"
   },
   {
     "da": "Æg",
     "en": "Egg",
-    "cat": "Mad og drikke"
+    "cat": "Mad og drikke",
+    "de": "Ei"
   },
   {
     "da": "Ost",
     "en": "Cheese",
-    "cat": "Mad og drikke"
+    "cat": "Mad og drikke",
+    "de": "Käse"
   },
   {
     "da": "Is",
     "en": "Ice cream",
-    "cat": "Mad og drikke"
+    "cat": "Mad og drikke",
+    "de": "Eis"
   },
   {
     "da": "Kop",
     "en": "Cup",
-    "cat": "Mad og drikke"
+    "cat": "Mad og drikke",
+    "de": "Tasse"
   }
 ];
