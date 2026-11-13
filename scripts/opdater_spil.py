@@ -10,6 +10,7 @@ import unicodedata
 ROOT = Path(__file__).resolve().parents[1]
 GAMES = ROOT / 'spil'
 OUTPUT = GAMES / 'spiloversigt.json'
+EXCLUSIONS = GAMES / 'skjul-fra-forsiden.json'
 
 # Titler/fag kan overskrives med spilinfo.json i mappen (se README).
 KNOWN = {
@@ -92,10 +93,23 @@ def config_for(file):
         print('Kan ikke læse metadata', location, exc)
     return {}
 
+def load_exclusions():
+    """Skjul efter filsti (fra spil/) eller spilnavn, uden at slette spillet."""
+    if not EXCLUSIONS.exists():
+        return set()
+    try:
+        raw = json.loads(EXCLUSIONS.read_text(encoding='utf-8'))
+        values = raw.get('skjul', []) if isinstance(raw, dict) else raw
+        return {str(value).strip().replace('\\', '/').casefold().strip('/') for value in values if str(value).strip()}
+    except (OSError, ValueError) as exc:
+        print('Ugyldig skjul-fra-forsiden.json:', exc)
+        return set()
+
 def main():
     GAMES.mkdir(exist_ok=True)
     entries = []
     images = image_candidates()
+    exclusions = load_exclusions()
     files = sorted(GAMES.rglob('*.html'), key=lambda p: p.as_posix().casefold())
     for file in files:
         rel = file.relative_to(ROOT)
@@ -109,7 +123,11 @@ def main():
         info = config_for(file)
         if info.get('skjul') is True:
             continue
+        rel_game = '/'.join(file.relative_to(GAMES).parts).casefold()
         title = str(info.get('titel') or standard[0]).strip()
+        if rel_game in exclusions or key.casefold() in exclusions or title.casefold() in exclusions:
+            print('Skjuler fra forsiden:', rel_game)
+            continue
         subject = str(info.get('fag') or standard[1]).strip()
         grades = info.get('klassetrin', [2,3,4,5,6])
         if not isinstance(grades, list) or not grades:
