@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Gratis undervisningsspil til smartboard og klasselokalet. Spil direkte uden login eller installation.">
+<meta name="theme-color" content="#102d38">
+<title>KlasseSpil – Gratis spil til undervisningen</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#183140;background:#f6f5ef}*{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #ef9c46;outline-offset:3px}.shell{max-width:1180px;margin:auto;padding:0 24px}.nav{display:flex;align-items:center;justify-content:space-between;padding:19px 0;gap:20px}.brand{font-size:23px;font-weight:900;letter-spacing:-1px;display:flex;align-items:center;gap:10px}.brand-symbol{display:grid;place-items:center;width:41px;height:41px;background:#f4aa4a;color:#0c3440;border-radius:13px;font-size:23px}.nav-items{display:flex;align-items:center;gap:26px;font-weight:700;font-size:14px}.nav-items a:hover{text-decoration:underline}.pill{display:inline-flex;align-items:center;padding:9px 14px;border:1px solid #d6d9cf;border-radius:100px;background:#fff;font-size:13px;font-weight:800}.hero{background:#123640;color:#fff9ed;border-radius:28px;min-height:336px;position:relative;overflow:hidden;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;padding:46px 53px;isolation:isolate}.hero:before{content:"";position:absolute;width:490px;height:490px;border:1px dashed #ffffff37;border-radius:50%;right:-180px;top:-110px;z-index:-1}.hero:after{content:"";position:absolute;width:320px;height:320px;background:#2c6065;border-radius:50%;right:80px;bottom:-220px;z-index:-1}.eyebrow{color:#ffc575;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:900}.hero h1{font-size:clamp(34px,5vw,60px);letter-spacing:-2.5px;line-height:1.08;margin:14px 0}.hero p{font-size:17px;line-height:1.7;max-width:550px;color:#dfebe7}.hero-art{display:grid;place-items:center;position:relative}.hero-art .circle{width:min(100%,260px);aspect-ratio:1;border-radius:50%;border:14px solid #f5b95e;background:#f9dca5;display:grid;place-items:center;box-shadow:0 15px 0 #09232b,0 22px 70px #0005;transform:rotate(-7deg);font-size:118px}.hero-art .stamp{position:absolute;right:5%;bottom:-15px;transform:rotate(11deg);background:#f4bd62;color:#17303b;border-radius:13px;padding:12px 18px;font-weight:950;box-shadow:0 6px 0 #8f642f}.hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:27px}.hero-badges span{font-size:13px;background:#ffffff17;border:1px solid #ffffff27;border-radius:99px;padding:9px 13px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:39px 0 19px}.section-head h2{font-size:clamp(26px,3vw,34px);margin:0;letter-spacing:-1px}.section-head p{margin:8px 0 0;color:#5b6b70}.filters{background:#fff;border:1px solid #e0e3dc;border-radius:18px;padding:15px;display:grid;grid-template-columns:minmax(180px,1fr) 190px 180px auto;gap:12px;align-items:center;box-shadow:0 4px 16px #153a3410}.filters input,.filters select{min-width:0;width:100%;border:1px solid #d8dedb;border-radius:11px;background:#fff;padding:13px 14px;color:#213d45}.reset{background:#f6f5ef;border:1px solid #d8dedb;border-radius:11px;padding:13px 16px;font-weight:750;color:#35505a}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:22px 0 35px}.game{border:1px solid #e0e3dc;background:#fff;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 5px 16px #1733360b;transition:transform .2s,box-shadow .2s}.game:hover{transform:translateY(-4px);box-shadow:0 15px 28px #1733361b}.cover{height:188px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.cover img{width:100%;height:100%;object-fit:cover}.cover.violet{background:radial-gradient(circle at 30% 30%,#714cb9,#27275b);color:#fff}.cover.mint{background:radial-gradient(circle at 70% 20%,#8be3ca,#177a81);color:#fff}.cover .emoji{font-size:95px;filter:drop-shadow(0 8px 4px #0003)}.cover .corner{position:absolute;left:14px;top:14px;border-radius:100px;padding:7px 12px;font-size:12px;font-weight:850;background:#fff;color:#173942}.game-body{padding:21px;display:flex;flex:1;flex-direction:column}.meta{display:flex;gap:8px;flex-wrap:wrap}.meta span{font-size:11px;font-weight:800;color:#37555c;background:#edf4f2;padding:7px 10px;border-radius:100px}.game h3{font-size:22px;letter-spacing:-.5px;margin:15px 0 8px}.game p{color:#607176;line-height:1.6;margin:0 0 19px;font-size:14px}.game-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #e7ebe7}.launch{background:#f1a747;color:#17333c;border-radius:11px;padding:11px 17px;font-weight:900;display:inline-flex;align-items:center;gap:7px}.download{font-size:13px;font-weight:750;color:#375c63;text-decoration:underline;text-underline-offset:4px}.hidden{display:none!important}.empty{padding:35px;border:1px dashed #abbeb7;border-radius:18px;text-align:center;color:#49616a;margin-bottom:38px}.info-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:10px 0 45px}.info{border-radius:17px;background:#e9eee7;padding:20px}.info b{display:block;font-size:16px;margin:8px 0}.info p{font-size:14px;line-height:1.6;color:#546b6d;margin:0}.info .icon{font-size:26px}.bottom{border-top:1px solid #d6ddd7;padding:26px 0 38px;display:flex;gap:20px;justify-content:space-between;flex-wrap:wrap;font-size:13px;color:#607174}.bottom strong{color:#1b3c43}.small-label{font-size:12px;font-weight:850;color:#325b61;text-transform:uppercase;letter-spacing:1px}@media(max-width:950px){.filters{grid-template-columns:1fr 1fr}.filters input{grid-column:span 2}.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.shell{padding:0 15px}.nav{padding:12px 0}.nav-items a:first-child{display:none}.hero{grid-template-columns:1fr;padding:30px 26px}.hero-art{display:none}.hero h1{letter-spacing:-1.5px}.hero p{font-size:15px}.filters{grid-template-columns:1fr}.filters input{grid-column:auto}.cards,.info-row{grid-template-columns:1fr}.cover{height:205px}.section-head{margin-top:30px}.nav-items{gap:10px}.pill{padding:8px 10px}}
+</style>
+</head>
+<body>
+<header class="shell"><nav class="nav" aria-label="Hovedmenu"><a class="brand" href="./"><span class="brand-symbol">✦</span>KlasseSpil<span style="color:#dc923d">.</span></a><div class="nav-items"><a href="#spillene">Alle spil</a><a href="#om">Om projektet</a><span class="pill">100 % gratis</span></div></nav></header>
+<main class="shell">
+<section class="hero"><div><div class="eyebrow">Et spil ad gangen. En sjovere skoledag.</div><h1>Skærp hjernen.<br>Slip legen løs.</h1><p>Gratis undervisningsspil, der virker direkte på smartboardet. Vælg et spil, saml klassen, og gå i gang. Ingen login eller installation.</p><div class="hero-badges"><span>✓ Klar til smartboard</span><span>✓ Ingen elevkonti</span><span>✓ Lavet til danske lærere</span></div></div><div class="hero-art" aria-hidden="true"><div class="circle">🎲</div><div class="stamp">SPIL & LÆR ✨</div></div></section>
+<section id="spillene" aria-labelledby="allgames"><div class="section-head"><div><div class="small-label">Spilbibliotek</div><h2 id="allgames">Find jeres næste klassespil</h2><p>Vælg et spil, som passer til din klasse og undervisning.</p></div><span class="pill" id="count">4 spil</span></div>
+<div class="filters"><input id="search" type="search" placeholder="Søg efter spil eller emne…" aria-label="Søg efter spil"><select id="subject" aria-label="Vælg fag"><option value="alle">Alle fag</option><option value="Matematik">Matematik</option><option value="Almen viden">Almen viden</option><option value="Dansk">Dansk</option></select><select id="grade" aria-label="Vælg klassetrin"><option value="alle">Alle klassetrin</option><option value="2">2. klasse</option><option value="3">3. klasse</option><option value="4">4. klasse</option><option value="5">5. klasse</option><option value="6">6. klasse</option></select><button class="reset" id="clear">Nulstil filtre</button></div>
+<div class="cards" id="cards">
+<article class="game" data-subject="Dansk" data-grades="2,3,4,5,6" data-search="gæt ordet gaet ordet billedord billeder tosproget dansk engelsk english mundtlighed sprog ordforråd">
+<div class="cover" style="background:linear-gradient(135deg,#284a88,#7157ed);color:white"><span class="emoji" aria-hidden="true">🗣️</span><span class="corner">Dansk / English</span></div><div class="game-body"><div class="meta"><span>Dansk</span><span>2.–6. klasse</span><span>2 sprog</span></div><h3>Gæt ordet</h3><p>Træn mundtlighed og ordforråd med billeder. Vælg dansk eller engelsk, og gæt ordene sammen i klassen.</p><div class="game-foot"><a class="launch" href="spil/gaet-ordet/index.html">Spil nu ↗</a></div></div></article>
+
+<article class="game" data-subject="Matematik" data-grades="2,3,4" data-search="piratjagten koordinatsystem matematik koordinater skattejagt">
+<div class="cover"><span class="emoji" aria-hidden="true">⚓</span><span class="corner">⚓ Favorit</span></div><div class="game-body"><div class="meta"><span>Matematik</span><span>2.–4. klasse</span><span>Fælles spil</span></div><h3>Piratjagten</h3><p>Find de rigtige koordinater, saml guldmønter, og hjælp klassen frem til de 30 point og den skjulte skat.</p><div class="game-foot"><a class="launch" href="spil/piratjagten.html">Spil nu ↗</a><a class="download" href="spil/piratjagten.html" download>Download</a></div></div></article>
+<article class="game" data-subject="Almen viden" data-grades="3,4,5,6" data-search="svære skøre quiz mærkelige spørgsmål hold logik natur dyr hovedbrud">
+<div class="cover violet"><span class="emoji" aria-hidden="true">🧠</span><span class="corner">🔥 Udfordring</span></div><div class="game-body"><div class="meta"><span>Almen viden</span><span>3.–6. klasse</span><span>2–10 hold</span></div><h3>Den svære og skøre quiz</h3><p>30 finurlige spørgsmål med overraskende viden og logik. I kan oprette op til 10 hold og føre point undervejs.</p><div class="game-foot"><a class="launch" href="spil/skoer-quiz.html">Spil nu ↗</a><a class="download" href="spil/skoer-quiz.html" download>Download</a></div></div></article>
+<article class="game" data-subject="Almen viden" data-grades="2,3,4" data-search="skør quiz sjove mærkelige dyr spørgsmål almen viden let">
+<div class="cover mint"><span class="emoji" aria-hidden="true">🎪</span><span class="corner">🌈 God start</span></div><div class="game-body"><div class="meta"><span>Almen viden</span><span>2.–4. klasse</span><span>2 hold</span></div><h3>Den helt skøre quiz</h3><p>30 skøre og overraskende spørgsmål, der er gode til en hurtig, fælles quiz med to hold.</p><div class="game-foot"><a class="launch" href="spil/quiz-let.html">Spil nu ↗</a><a class="download" href="spil/quiz-let.html" download>Download</a></div></div></article>
+<article class="game" data-subject="Dansk" data-grades="2,3,4,5,6" data-search="galgeleg hangman ord bogstaver stavning dansk gæt ord sværhedsgrad let mellem svær">
+<div class="cover" style="background:radial-gradient(circle at 40% 28%,#f7d794,#c17b3b);color:#332c27"><span class="emoji" aria-hidden="true">🔤</span><span class="corner">🎲 Nye ord hver gang</span></div><div class="game-body"><div class="meta"><span>Dansk</span><span>2.–6. klasse</span><span>3 sværhedsgrader</span></div><h3>Galgeleg</h3><p>Gæt et tilfældigt ord, vælg mellem let, mellem og svær, og samarbejd om bogstaverne før de otte forsøg er brugt.</p><div class="game-foot"><a class="launch" href="spil/galgeleg.html">Spil nu ↗</a><a class="download" href="spil/galgeleg.html" download>Download</a></div></div></article>
+</div><div class="empty hidden" id="empty">Ingen spil passer til filtrene. Prøv et andet fag eller klassetrin.</div></section>
+<section id="om" aria-labelledby="about"><div class="section-head"><div><div class="small-label">Hvorfor KlasseSpil?</div><h2 id="about">Undervisningen skal være nem at starte</h2><p>En lille spilportal bygget til virkeligheden i et klasselokale.</p></div></div><div class="info-row"><div class="info"><span class="icon">⚡</span><b>Åbn og spil</b><p>Ingen konti, adgangskoder eller installation. Vælg et spil og vis det på tavlen.</p></div><div class="info"><span class="icon">🎯</span><b>Fagligt fokus</b><p>Spillene skal gøre eleverne aktive, styrke deres forståelse og sætte samtaler i gang.</p></div><div class="info"><span class="icon">📦</span><b>Tag spillet med</b><p>Download et spil som HTML-fil og brug det i en browser – også når nettet driller.</p></div></div></section>
+</main>
+<footer class="shell bottom"><strong>KlasseSpil · Gratis undervisningsspil</strong><span>Første testversion · Ingen elevlogin eller reklamer · Spil videre!</span></footer>
+<script>
+(() => {
+  const search = document.getElementById('search');
+  const subject = document.getElementById('subject');
+  const grade = document.getElementById('grade');
+  const container = document.getElementById('cards');
+  const count = document.getElementById('count');
+  const empty = document.getElementById('empty');
+  const existingLinks = new Set([...container.querySelectorAll('article.game a[href]')]
+    .map(a => normalize(a.getAttribute('href'))));
+
+  function normalize(link) {
+    try {
+      return decodeURI(new URL(link, document.baseURI).pathname).replace(/\/+$/, '').toLowerCase();
+    } catch { return link; }
+  }
+  function update() {
+    let n = 0;
+    for (const card of container.querySelectorAll('article.game')) {
+      const grades = (card.dataset.grades || '').split(',');
+      const matches = (subject.value === 'alle' || card.dataset.subject === subject.value)
+        && (grade.value === 'alle' || grades.includes(grade.value))
+        && (card.dataset.search || '').includes(search.value.toLocaleLowerCase('da').trim());
+      card.classList.toggle('hidden', !matches);
+      if (matches) n++;
+    }
+    count.textContent = n + ' spil';
+    empty.classList.toggle('hidden', n !== 0);
+  }
+  [search, subject, grade].forEach(control => control.addEventListener('input', update));
+  document.getElementById('clear').addEventListener('click', () => {
+    search.value = ''; subject.value = 'alle'; grade.value = 'alle'; update(); search.focus();
+  });
+
+  function setCoverImage(cover, path, icon) {
+    const fallback = () => {
+      cover.replaceChildren();
+      const emoji = document.createElement('span');
+      emoji.className = 'emoji';
+      emoji.textContent = String(icon || '🎮');
+      cover.append(emoji);
+    };
+    if (!path) { fallback(); return; }
+    try {
+      const imageUrl = new URL(path, document.baseURI);
+      if (imageUrl.origin !== location.origin || !/\.(png|jpe?g|webp|svg|gif)$/i.test(imageUrl.pathname)) {
+        fallback(); return;
+      }
+      const img = document.createElement('img');
+      img.src = imageUrl.href;
+      img.alt = '';
+      img.loading = 'lazy';
+      img.onerror = fallback;
+      cover.replaceChildren(img);
+    } catch { fallback(); }
+  }
+
+  function addGame(game) {
+    if (!game || !game.url || !game.titel) return;
+    if (existingLinks.has(normalize(game.url))) {
+      // Opdater også forsidebilledet på kort, som allerede står i index.html.
+      const old = [...container.querySelectorAll('article.game')].find(card =>
+        [...card.querySelectorAll('a[href]')].some(a => normalize(a.getAttribute('href')) === normalize(game.url)));
+      if (old && game.billede) {
+        const cover = old.querySelector('.cover');
+        if (cover) setCoverImage(cover, game.billede, game.ikon || '🎮');
+      }
+      return;
+    }
+    const url = new URL(game.url, document.baseURI);
+    if (url.origin !== location.origin || !url.pathname.endsWith('.html')) return;
+    const title = String(game.titel);
+    const subjectName = String(game.fag || 'Almen viden');
+    const grades = (game.klassetrin || ['2','3','4','5','6']).map(String);
+    const description = String(game.beskrivelse || 'Åbn spillet og spil sammen i klassen.');
+    const article = document.createElement('article');
+    article.className = 'game';
+    article.dataset.subject = subjectName;
+    article.dataset.grades = grades.join(',');
+    article.dataset.search = [title, subjectName, description].join(' ').toLocaleLowerCase('da');
+    const cover = document.createElement('div');
+    cover.className = 'cover violet';
+    setCoverImage(cover, game.billede, game.ikon || '🎮');
+    const body = document.createElement('div');
+    body.className = 'game-body';
+    const meta = document.createElement('div');
+    meta.className = 'meta';
+    const tag = document.createElement('span'); tag.textContent = subjectName; meta.append(tag);
+    const classes = document.createElement('span');
+    classes.textContent = grades.join(', ') + '. klasse'; meta.append(classes);
+    const heading = document.createElement('h3'); heading.textContent = title;
+    const text = document.createElement('p'); text.textContent = description;
+    const foot = document.createElement('div'); foot.className = 'game-foot';
+    const launch = document.createElement('a'); launch.className = 'launch';
+    launch.href = url.href; launch.textContent = 'Spil nu →';
+    foot.append(launch);
+    body.append(meta, heading, text, foot);
+    article.append(cover, body);
+    container.append(article);
+    existingLinks.add(normalize(game.url));
+    if (![...subject.options].some(o => o.value === subjectName)) {
+      const option = document.createElement('option'); option.value = subjectName;
+      option.textContent = subjectName; subject.append(option);
+    }
+  }
+  update();
+  fetch('spil/spiloversigt.json', {cache: 'no-store'})
+    .then(response => { if (!response.ok) throw Error('Spiloversigten er ikke oprettet endnu'); return response.json(); })
+    .then(games => { if (Array.isArray(games)) games.forEach(addGame); update(); })
+    .catch(err => console.info('Automatisk spilleliste er endnu ikke tilgængelig:', err.message));
+})();
+</script>
+</body></html>
