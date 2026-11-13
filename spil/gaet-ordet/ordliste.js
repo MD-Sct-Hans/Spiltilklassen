@@ -1802,3 +1802,96 @@ window.ORDLISTE = [
     "de": "Wurst"
   }
 ];
+
+/* HØJTIDER – 60 LETTE ORD
+   Dansk, engelsk og tysk
+   Erstatter den gamle kategori Højtider.
+*/
+
+window.ORDLISTE = window.ORDLISTE.filter(
+  ord => ord.cat !== "Højtider"
+);
+
+window.ORDLISTE.push(
+
+  // JUL
+  { da: "Juletræ", en: "Christmas tree", de: "Weihnachtsbaum", cat: "Højtider" },
+  { da: "Julemand", en: "Santa Claus", de: "Weihnachtsmann", cat: "Højtider" },
+  { da: "Nisse", en: "Christmas elf", de: "Weihnachtswichtel", cat: "Højtider" },
+  { da: "Julegave", en: "Christmas present", de: "Weihnachtsgeschenk", cat: "Højtider" },
+  { da: "Julekugle", en: "Christmas bauble", de: "Weihnachtskugel", cat: "Højtider" },
+  { da: "Stjerne", en: "Star", de: "Stern", cat: "Højtider" },
+  { da: "Rensdyr", en: "Reindeer", de: "Rentier", cat: "Højtider" },
+  { da: "Engel", en: "Angel", de: "Engel", cat: "Højtider" },
+
+  // PÅSKE
+  { da: "Påskeæg", en: "Easter egg", de: "Osterei", cat: "Højtider" },
+  { da: "Påskehare", en: "Easter bunny", de: "Osterhase", cat: "Højtider" },
+  { da: "Påskekylling", en: "Easter chick", de: "Osterküken", cat: "Højtider" },
+  { da: "Påskelilje", en: "Daffodil", de: "Narzisse", cat: "Højtider" },
+  { da: "Æggekurv", en: "Egg basket", de: "Eierkorb", cat: "Højtider" },
+  { da: "Kors", en: "Cross", de: "Kreuz", cat: "Højtider" },
+
+  // FASTELAVN
+  { da: "Fastelavnstønde", en: "Shrovetide barrel", de: "Fastnachtsfass", cat: "Højtider" },
+  { da: "Fastelavnsbolle", en: "Shrovetide bun", de: "Fastnachtsgebäck", cat: "Højtider" },
+  { da: "Kostume", en: "Costume", de: "Kostüm", cat: "Højtider" },
+  { da: "Maske", en: "Mask", de: "Maske", cat: "Højtider" },
+  { da: "Krone", en: "Crown", de: "Krone", cat: "Højtider" },
+  { da: "Ansigtsmaling", en: "Face paint", de: "Gesichtsschminke", cat: "Højtider" },
+
+  // HALLOWEEN
+  { da: "Græskar", en: "Pumpkin", de: "Kürbis", cat: "Højtider" },
+  { da: "Spøgelse", en: "Ghost", de: "Gespenst", cat: "Højtider" },
+  { da: "Heks", en: "Witch", de: "Hexe", cat: "Højtider" },
+  { da: "Skelet", en: "Skeleton", de: "Skelett", cat: "Højtider" },
+  { da: "Flagermus", en: "Bat", de: "Fledermaus", cat: "Højtider" },
+  { da: "Spindelvæv", en: "Spiderweb", de: "Spinnennetz", cat: "Højtider" },
+
+  // NYTÅR
+  { da: "Fyrværkeri", en: "Fireworks", de: "Feuerwerk", cat: "Højtider" },
+  { da: "Raket", en: "Rocket", de: "Rakete", cat: "Højtider" },
+  { da: "Festhat", en: "Party hat", de: "Partyhut", cat: "Højtider" },
+  { da: "Konfetti", en: "Confetti", de: "Konfetti", cat: "Højtider" },
+  { da: "Stjernekaster", en: "Sparkler", de: "Wunderkerze", cat: "Højtider" },
+
+  // RAMADAN OG EID
+  { da: "Måne", en: "Moon", de: "Mond", cat: "Højtider" },
+  { da: "Moské", en: "Mosque", de: "Moschee", cat: "Højtider" },
+  { da: "Lanterne", en: "Lantern", de: "Laterne", cat: "Højtider" },
+  { da: "Dadler", en: "Dates", de: "Datteln", cat: "Højtider" },
+  { da: "Bedetæppe", en: "Prayer rug", de: "Gebetsteppich", cat: "Højtider" },
+  { da: "Ramadan", en: "Ramadan", de: "Ramadan", cat: "Højtider" },
+  { da: "Eid", en: "Eid", de: "Eid", cat: "Højtider" },
+
+  // JØDISKE HØJTIDER
+  { da: "Hanukkah", en: "Hanukkah", de: "Chanukka", cat: "Højtider" },
+  { da: "Lysestage", en: "Candleholder", de: "Kerzenhalter", cat: "Højtider" },
+  { da: "Stearinlys", en: "Candle", de: "Kerze", cat: "Højtider" },
+  { da: "Snurretop", en: "Spinning top", de: "Kreisel", cat: "Højtider" },
+  { da: "Davidsstjerne", en: "Star of David", de: "Davidstern", cat: "Højtider" },
+
+  // DIWALI OG HOLI
+  { da: "Diwali", en: "Diwali", de: "Diwali", cat: "Højtider" },
+  { da: "Olielampe", en: "Oil lamp", de: "Öllampe", cat: "Højtider" },
+  { da: "Blomster", en: "Flowers", de: "Blumen", cat: "Højtider" },
+  { da: "Holi", en: "Holi", de: "Holi", cat: "Højtider" },
+  { da: "Farvepulver", en: "Coloured powder", de: "Farbpulver", cat: "Højtider" },
+
+  // KINESISK NYTÅR
+  { da: "Drage", en: "Dragon", de: "Drache", cat: "Højtider" },
+  { da: "Rød kuvert", en: "Red envelope", de: "Roter Umschlag", cat: "Højtider" },
+  { da: "Løvedans", en: "Lion dance", de: "Löwentanz", cat: "Højtider" },
+  { da: "Papirlanterne", en: "Paper lantern", de: "Papierlaterne", cat: "Højtider" },
+  { da: "Kinesisk nytår", en: "Chinese New Year", de: "Chinesisches Neujahr", cat: "Højtider" },
+
+  // ANDRE FESTER OG PERSONER
+  { da: "Fødselsdagskage", en: "Birthday cake", de: "Geburtstagskuchen", cat: "Højtider" },
+  { da: "Ballon", en: "Balloon", de: "Luftballon", cat: "Højtider" },
+  { da: "Flag", en: "Flag", de: "Flagge", cat: "Højtider" },
+  { da: "Bryllup", en: "Wedding", de: "Hochzeit", cat: "Højtider" },
+  { da: "Jesus", en: "Jesus", de: "Jesus", cat: "Højtider" },
+  { da: "Buddha", en: "Buddha", de: "Buddha", cat: "Højtider" },
+  { da: "Kirke", en: "Church", de: "Kirche", cat: "Højtider" }
+
+);
