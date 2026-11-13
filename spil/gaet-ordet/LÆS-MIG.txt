@@ -1,0 +1,33 @@
+GÆT ORDET – BILLEDER I MAPPER
+
+Åbn index.html. Spillet kan afvikles lokalt og lægges på GitHub Pages.
+
+STRUKTUR:
+  index.html                 (selve spillet)
+  ordliste.js                (dansk/engelsk ord + kategori)
+  billeder/Skole/Blyant.png  (eksempel)
+  billeder/Dyr/Hund.jpg      (eksempel)
+
+LÆG ET NYT BILLEDE IND:
+1. Find ordets danske stavemåde i ordliste.js, fx "Æble".
+2. Find kategori, fx "Frugt og grønt".
+3. Læg billedet i billeder/Frugt og grønt/Æble.png
+4. Opdatér siden i browseren. Spillet viser automatisk billedet, hvis ordet findes i ordlisten.
+
+Understøttede filtyper: png, jpg, jpeg, webp og svg.
+Dansk filnavn og store/små bogstaver skal passe præcist.
+Billedet må kun vise det relevante motiv og ikke have tekst på.
+
+NYT ORD:
+Tilføj et objekt i ordliste.js på formen:
+{ "da": "Køleskab", "en": "Refrigerator", "cat": "Hjemmet" },
+og læg billeder/Hjemmet/Køleskab.jpg ind.
+
+VIGTIGT: En statisk hjemmeside kan ikke selv liste filer i en mappe.
+Derfor bruger spillet ordliste.js til at vide, hvilke ord der skal tjekkes for billeder.
+Ord uden billeder kommer ikke med i tilfældig-bunken.
+
+Hvis du kun uploader index.html uden mapperne og ordliste.js, virker spillet ikke.
+Upload hele mappen til samme sted på hjemmesiden.
+
+Pakken indeholder 14 små eksempelillustrationer for at demonstrere teknikken.
